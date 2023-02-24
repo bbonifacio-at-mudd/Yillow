@@ -9528,10 +9528,12 @@ button.bg-dark:focus {
 
 .text-primary {
   color: #2878EB !important;
+  text-align: center;
 }
 
 a.text-primary:hover, a.text-primary:focus {
   color: #1154b6 !important;
+  text-align: center;
 }
 
 .text-secondary {
