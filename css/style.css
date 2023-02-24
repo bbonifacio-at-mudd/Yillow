@@ -81,7 +81,7 @@ hr {
   overflow: visible;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6 {
   margin-top: 0;
 }
 
@@ -365,23 +365,16 @@ template {
   display: none !important;
 }
 
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
+h2, h3, h4, h5, h6,
+ .h2, .h3, .h4, .h5, .h6 {
   font-family: "Jost", sans-serif;
   font-weight: 500;
   line-height: 1.2;
   color: #120F2D;
 }
 
-h1, .h1 {
-  font-size: 2.5rem;
-}
 
-@media (max-width: 1200px) {
-  h1, .h1 {
-    font-size: calc(1.375rem + 1.5vw) ;
-  }
-}
+
 
 h2, .h2 {
   font-size: 2rem;
@@ -9721,7 +9714,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 /********** Custom CSS ********** **/
-h1,
+
 h2,
 .font-weight-bold {
   font-weight: 700 !important;
