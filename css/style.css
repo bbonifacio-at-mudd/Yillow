@@ -63,6 +63,9 @@ body {
   text-align: left;
   background-color: #FFFFFF;
 }
+h1 {
+  text-align: center;
+}
 
 [tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important;
