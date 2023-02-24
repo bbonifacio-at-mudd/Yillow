@@ -66,6 +66,7 @@ body {
 h1 {
   text-align: center;
   color: #2878EB !important;
+  margin-bottom: 0;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
