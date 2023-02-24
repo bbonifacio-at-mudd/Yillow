@@ -64,6 +64,8 @@ body {
   background-color: #FFFFFF;
 }
 h1 {
+  display: flex;
+  justify-content: center;
   text-align: center;
   color: #2878EB !important;
   margin-bottom: 0;
