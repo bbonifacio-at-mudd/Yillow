@@ -39,9 +39,22 @@
                 margin: 20px 0; /* add some margin between the images and the text */
                 }
 
-                .image-container img {
-                width: 25%; /* set the width of each image to 25% */
-                margin: 0 10px; /* add some margin between the images */
+                .image-caption {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 25%; /* set the width of each image-caption to 25% */
+                margin: 0 10px; /* add some margin between the image-captions */
+                }
+
+                .image-caption img {
+                width: 100%; /* set the width of each image to 100% of the image-caption */
+                height: 200px; /* set the height of each image to 200 pixels */
+                object-fit: cover; /* scale the image to cover the container while preserving aspect ratio */
+                }
+
+                .image-caption p {
+                margin: 5px 0; /* add some margin between the caption and the image */
                 }
 
                 .second-section p,
@@ -49,6 +62,12 @@
                 .second-section a {
                 margin: 20px 0; /* add some margin between the text and the images */
                 }
+
+
+
+
+
+
 
 
 
@@ -5460,14 +5479,26 @@
 
 
         <div class="second-section">
-            <h2>What if you could estimatea house's </h2>
+            <h2>What if you could estimate a house's </h2>
             <h2>value from some pictures of it?</h2>
             <div class="image-container">
-              <img src="/images/33_frontal.jpg" alt="My Awesome Project">
-              <img src="/images/33_kitchen.jpg" alt="My Awesome Project">
-              <img src="/images/33_bedroom.jpg" alt="My Awesome Project">
-              <img src="/images/33_bathroom.jpg" alt="My Awesome Project">
-            </div>
+                <div class="image-caption">
+                  <img src="/images/33_frontal.jpg" alt="My Awesome Project">
+                  <p>A Frontal Picture of a House</p>
+                </div>
+                <div class="image-caption">
+                  <img src="/images/33_kitchen.jpg" alt="My Awesome Project">
+                  <p>A Kitchen Picture of a House</p>
+                </div>
+                <div class="image-caption">
+                  <img src="/images/33_bedroom.jpg" alt="My Awesome Project">
+                  <p>A Bedroom Picture of a House</p>
+                </div>
+                <div class="image-caption">
+                  <img src="/images/33_bathroom.jpg" alt="My Awesome Project">
+                  <p>A Bathroom Picture of a House</p>
+                </div>
+              </div>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consectetur semper neque. Proin et malesuada risus. Suspendisse potenti. Morbi maximus libero eget lorem rhoncus finibus. Curabitur vitae odio vel mauris ultricies rhoncus.</p>
             <ul>
               <li>Feature 1</li>
