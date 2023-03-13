@@ -28,8 +28,34 @@
                 }
 
                 .second-section h2 {
-                margin: 0; /* reset the default margin */
+                margin: 0; 
+                font-size: 40px; 
                 }
+
+            .image-container {
+                display: flex; /* display the images side by side */
+                justify-content: center; /* center the images horizontally */
+                align-items: center; /* center the images vertically */
+                margin: 20px 0; /* add some margin between the images and the text */
+                }
+
+                .image-container img {
+                width: 25%; /* set the width of each image to 25% */
+                margin: 0 10px; /* add some margin between the images */
+                }
+
+                .second-section p,
+                .second-section ul,
+                .second-section a {
+                margin: 20px 0; /* add some margin between the text and the images */
+                }
+
+
+
+
+
+
+
 
 
 
@@ -5434,9 +5460,14 @@
 
 
         <div class="second-section">
-            <h2>What if you could estimate</h2>
-            <h2>a house's value from a picture?</h2>
-            <img src="/images/room-item4.jpg" alt="My Awesome Project">
+            <h2>What if you could estimatea house's </h2>
+            <h2>value from some pictures of it?</h2>
+            <div class="image-container">
+              <img src="/images/33_frontal.jpg" alt="My Awesome Project">
+              <img src="/images/33_kitchen.jpg" alt="My Awesome Project">
+              <img src="/images/33_bedroom.jpg" alt="My Awesome Project">
+              <img src="/images/33_bathroom.jpg" alt="My Awesome Project">
+            </div>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consectetur semper neque. Proin et malesuada risus. Suspendisse potenti. Morbi maximus libero eget lorem rhoncus finibus. Curabitur vitae odio vel mauris ultricies rhoncus.</p>
             <ul>
               <li>Feature 1</li>
@@ -5444,7 +5475,7 @@
               <li>Feature 3</li>
             </ul>
             <p><a href="#">Learn More</a></p>
-        </div>
+          </div>
     </body>
 </html>
 <!-- line 5425 is when second section starts-->
