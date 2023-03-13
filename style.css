@@ -1,3 +1,25 @@
 .react-autosuggest__suggestion:first-of-type {
     display: none;
   }
+
+
+  #search-bar {
+    position: static;
+  }
+
+
+  .second-section {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center; /* add this line to center the h2 elements */
+  }
+  
+  .second-section h2 {
+    margin: 0; /* reset the default margin */
+  }
+  
+  
+  .second-section h2 {
+    margin: 0; /* reset the default margin */
+  }
+  
