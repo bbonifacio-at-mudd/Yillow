@@ -117,13 +117,86 @@
                 width: 75%;
                 }
 
+                
+
+                .inverse-section {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 20px;
+                }
+
+                .inverse-section .text-section p {
+                flex: 1;
+                padding-left: 100px;
+                font-size: 15px;
+                text-align: center; 
+                }
+
+            
+
+                .inverse-section .image-section {
+                    display: flex;
+                    justify-content: flex-end; /* align the child element to the right */
+                    padding-right: 20px;
+                    width: 60%; /* set the width of the container element to 100% */
+                }
+
+                .inverse-section .image-section .image-caption {
+                text-align: center; 
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 60%; /* set the width of each image-caption to 25% */
+                margin: 0 10px; /* add some margin between the image-captions */
+                }
+
+                .inverse-section .image-section .image-caption img {
+                width: 100%; /* set the width of each image to 100% of the image-caption */
+                height: 100%; /* set the height of each image to 200 pixels */
+                object-fit: cover; /* scale the image to cover the container while preserving aspect ratio */
+                }
+
+                .inverse-section .image-section img {
+                width: 75%;
+                }
 
 
 
 
 
+                .image-container-half {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 20px 0;
+                    height: 400px;
+                    }
+
+                    .image-container-half .image-caption {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                    font-size: 10px;
+                    margin: 0 10px;
+                    }
+
+                    .image-container-half .image-caption img {
+                    height: 300px;
+                    width: 400px;
+                   
+                    }
+
+                    .image-container-half .image-caption p {
+                    margin: 5px 0;
+                    margin-left: 30px;
+                    font-size: 15px;
+                    }
 
 
+                    
 
 
 
@@ -5538,19 +5611,19 @@
             <div class="image-container">
                 <div class="image-caption">
                   <img src="./images/33_frontal.jpg" alt="My Awesome Project">
-                  <p>A Frontal Picture of a House</p>
+                  <p>A Frontal Picture</p>
                 </div>
                 <div class="image-caption">
                   <img src="./images/33_kitchen.jpg" alt="My Awesome Project">
-                  <p>A Kitchen Picture of a House</p>
+                  <p>A Kitchen Picture</p>
                 </div>
                 <div class="image-caption">
                   <img src="./images/33_bedroom.jpg" alt="My Awesome Project">
-                  <p>A Bedroom Picture of a House</p>
+                  <p>A Bedroom Picture</p>
                 </div>
                 <div class="image-caption">
                   <img src="./images/33_bathroom.jpg" alt="My Awesome Project">
-                  <p>A Bathroom Picture of a House</p>
+                  <p>A Bathroom Picture</p>
                 </div>
               </div>
               <p>This is the concept I set out to explore in this project, 
@@ -5559,7 +5632,7 @@
 
           </div>
           <hr>
-          <div style="text-align: center; font-size: 24px;">Part I: Structured Data Benchmark</div>
+          <div style="text-align: center; font-size: 24px;">Structured Data Benchmark</div>
             <hr>
           <div class="section">
             <div class="text-section">
@@ -5591,6 +5664,92 @@
                 </div>
             </div>
           </div>
+
+
+
+          <div class="second-section">
+            <div style="text-align: center; font-size: 24px;">The Performance of Machine Learning on Only Structured Data </div>
+            <div class="image-container-half">
+                <div class="image-caption">
+                  <img src="./images/Train_Performance.png" alt="My Awesome Project">
+                  <p>Training Root Mean Squared Error (RMSE)</p>
+                </div>
+
+                <div class="image-caption">
+                    
+                    
+                  </div>
+                <div class="image-caption">
+                  <img src="./images/Val_Performance.png" alt="My Awesome Project">
+                  <p> Validation Root Mean Squared Error (RMSE)</p>
+                </div>
+              </div>
+              <p>As shown by our training and validation performance, machine learning on our
+                small dataset of about 300 houses is not very accurate, with a best median validation
+                RMSE of about $200,000. This is not surprising due to the small size of our datset. 
+                However, it is still interesting to see how well a simple model can perform on only structured data.
+            </p>
+
+            <p> With this benchmark in mind, let's see how well
+                we can do with pictures!
+                
+            </p>
+
+          </div>
+          <hr>
+          <div style="text-align: center; font-size: 24px;">Convolutional Neural Network Performance</div>
+            <hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <div class="inverse-section">
+            <div class="text-section">
+              <p> Hold on! Before we dive into the deep end and talk about how <br>
+                pictures can be used to estimate house value, let's first go back <br> 
+                a little. As a benchmark for this project, let's first look at how <br>
+                well we can estimate house value using only structured data. This <br>
+                is an important decision for a couple reasons. First, machine <br>
+                learning models have historically performed very well on <br>
+                structured data, which is data that can be organized into tables <br>
+                and columns. Second, it is well-known that the largest factor in <br>
+                a house's value is its location, which can be represented by the <br>
+                structured data of the house's zip code. So, a ML model's performance <br>
+                on structured data is a good benchmark for how well it can perform <br>
+                on unstructured data, like pictures. <br>
+              </p>
+
+              </div>
+            <div class="image-section">
+                <div class="image-caption">
+                    <img src="./images/Structured_Data.png" alt="My Awesome Project">
+                    <p>Structured Data is quantitative and can usually be arranged in 
+                        tables and columns. The four structured data values I used are 
+                        zip code, square footage, number of bedrooms, 
+                        and number of bathrooms. Machine Learning perform extraordinarily 
+                        well on quantitative data, so this will serve as a good benchmark for 
+                        the the rest of the project. 
+                    </p>
+                </div>
+            </div>
+          </div>
+
 
 
           <div class="second-section">
