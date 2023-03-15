@@ -79,24 +79,28 @@
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: center;
-                margin-top: 50px;
+                margin-top: 20px;
                 }
 
                 .text-section p {
                 flex: 1;
-                padding-left: 50px;
-                font-size: 20px;
+                padding-left: 100px;
+                font-size: 15px;
                 }
 
             
 
                 .image-section {
-                flex: 1;
-                padding-right: 20px;
+                    display: flex;
+                    justify-content: flex-end; /* align the child element to the right */
+                    padding-right: 20px;
+                    width: 60%; /* set the width of the container element to 100% */
                 }
 
+    
+
                 .image-section img {
-                width: 100%;
+                width: 75%;
                 }
 
 
@@ -5535,13 +5539,8 @@
                   <p>A Bathroom Picture of a House</p>
                 </div>
               </div>
-              <p>As it turns out, you can! With a frontal, kitchen, bedroom, 
-                and bathroom picture of a house, <br>
-                you can get a decent estimate
-                of the house's value with a relatively small 
-                dataset of about five hundred houses. <br>
-                This is the concept I set out to explore in this project, 
-                and thankfully I didn't have to make my own dataset. <br>
+              <p>This is the concept I set out to explore in this project, 
+                so read on if you want to learn more about it! 
                 </p>
 
           </div>
@@ -5550,7 +5549,18 @@
             <hr>
           <div class="section">
             <div class="text-section">
-              <p> Hold on! Before we dive into the deep end and talk about 
+              <p> Hold on! Before we dive into the deep end and talk about how <br>
+                pictures can be used to estimate house value, let's first go back <br> 
+                a little. As a benchmark for this project, let's first look at how <br>
+                well we can estimate house value using only structured data. This <br>
+                is a significant decision for a couple reasons. First, machine <br>
+                learning models have historically performed very well on <br>
+                structured data, which is data that can be organized into tables <br>
+                and columns. Second, it is well-known that the largest factor in <br>
+                a house's value is its location, which can be represented by the <br>
+                structured data of the house's zip code. So, a ML model's performance <br>
+                on structured data is a good benchmark for how well it can perform <br>
+                on unstructured data, like pictures. <br>
 
               </div>
             <div class="image-section">
@@ -5560,7 +5570,7 @@
 
 
           <div class="second-section">
-              <h2> References</h2>
+            <div style="text-align: center; font-size: 24px;">References </div>
               <hr>
               <p> To lean into the parody-project, this website is meant to look like the Zillow website, 
                 and I used much of their code as well as the main house image on their website to make that happen.
