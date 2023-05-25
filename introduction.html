@@ -19,6 +19,9 @@
         <meta name="ROBOTS" content="ALL"/>
         <meta name="msvalidate.01" content="D002B788494C63AC593FB8ADE2F8FB5B"/>
         <meta name="google-site-verification" content="MuF3jRY3vxj9oUxkk9w1b-fm0FvR7ktG0348cGZyKtU"/>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
         <style id="server-styles">
             .second-section {
                 padding: 100px;
@@ -2592,6 +2595,7 @@
         <link rel="preload" href="https://www.zillowstatic.com/s3/homepage/_next/static/runtime/main-ea96991.js" as="script"/>
     </head>
     <body class="znav-transparent">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <div id="local-app-upsell" class="no-animation"></div>
         <div data-testid="topnav">
             <script>
@@ -6863,185 +6867,196 @@
         <script id="frameScripts" type="application/json">
             {"topnav":"https://s.zillowstatic.com/s3/pfs/topnav-4009ccc92dfd49429379.js","footer":"https://s.zillowstatic.com/s3/pfs/oneTrust-07e36a36aec73d6dc2c7.js","core":"https://s.zillowstatic.com/s3/pfs/core-8903757f0f5bf45f32b8.js"}
         </script>
-
-        <div class="second-section">
-            <h2>What if you could estimate a house's </h2>
-            <h2>value from some pictures of it?</h2>
-            <div class="image-container">
-                <div class="image-caption">
-                  <img src="./images/33_frontal.jpg" alt="My Awesome Project">
-                  <p>A Frontal Picture</p>
+    </body>
+    <!-- Header Above -->
+    <!-- Body Below -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Project Overview</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f4f4f4;
+            }
+            .container {
+                width: 80%;
+                margin: 0 auto;
+                padding: 20px;
+            }
+            .row {
+                display: flex;
+                flex-wrap: wrap;
+                margin: 20px 0;
+            }
+            .col-6 {
+                flex: 50%;
+            }
+            .col-4 {
+                flex: 33.33%;
+            }
+            .col {
+                flex: 100%;
+            }
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+            h2, h3 {
+                color: #333;
+            }
+            p {
+                line-height: 1.6;
+                color: #666;
+            }
+            .text-center {
+                justify-content: center;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <img src="/images/project-description.jpg" alt="Project Overview">
                 </div>
-                <div class="image-caption">
-                  <img src="./images/33_kitchen.jpg" alt="My Awesome Project">
-                  <p>A Kitchen Picture</p>
-                </div>
-                <div class="image-caption">
-                  <img src="./images/33_bedroom.jpg" alt="My Awesome Project">
-                  <p>A Bedroom Picture</p>
-                </div>
-                <div class="image-caption">
-                  <img src="./images/33_bathroom.jpg" alt="My Awesome Project">
-                  <p>A Bathroom Picture</p>
-                </div>
-              </div>
-              <p>This is the concept I set out to explore in this project, 
-                so read on if you want to learn more about it! 
-                </p>
-
-          </div>
-          <hr>
-          <div style="text-align: center; font-size: 24px;">Structured Data Benchmark</div>
-            <hr>
-          <div class="section">
-            <div class="text-section">
-              <p> Hold on! Before we dive into the deep end and talk about how <br>
-                pictures can be used to estimate house value, let's first go back <br> 
-                a little. As a benchmark for this project, let's first look at how <br>
-                well we can estimate house value using only structured data. This <br>
-                is an important decision for a couple reasons. First, machine <br>
-                learning models have historically performed very well on <br>
-                structured data, which is data that can be organized into tables <br>
-                and columns. Second, it is well-known that the largest factor in <br>
-                a house's value is its location, which can be represented by the <br>
-                structured data of the house's zip code. So, a ML model's performance <br>
-                on structured data is a good benchmark for how well it can perform <br>
-                on unstructured data, like pictures. <br>
-              </p>
-
-              </div>
-            <div class="image-section">
-                <div class="image-caption">
-                    <img src="./images/Structured_Data.png" alt="My Awesome Project">
-                    <p>Structured Data is quantitative and can usually be arranged in 
-                        tables and columns. The four structured data values I used are 
-                        zip code, square footage, number of bedrooms, 
-                        and number of bathrooms. Machine Learning perform extraordinarily 
-                        well on quantitative data, so this will serve as a good benchmark for 
-                        the the rest of the project. 
-                    </p>
-                </div>
-            </div>
-          </div>
-
-
-
-          <div class="second-section">
-            <div style="text-align: center; font-size: 24px;">The Performance of Machine Learning on Only Structured Data </div>
-            <div class="image-container-half">
-                <div class="image-caption">
-                  <img src="./images/Train_Performance.png" alt="My Awesome Project">
-                  <p>Training Root Mean Squared Error (RMSE)</p>
-                </div>
-
-                <div class="image-caption">
-                    
-                    
-                  </div>
-                <div class="image-caption">
-                  <img src="./images/Val_Performance.png" alt="My Awesome Project">
-                  <p> Validation Root Mean Squared Error (RMSE)</p>
-                </div>
-              </div>
-              <p>As shown by our training and validation performance, machine learning on our
-                small dataset of about 300 houses is not very accurate, with a best median validation
-                RMSE of about $200,000. This is not surprising due to the small size of our datset. 
-                However, it is still interesting to see how well a simple model can perform on only structured data.
-            </p>
-
-            <p> With this benchmark in mind, let's see how well
-                we can do with pictures!
-                
-            </p>
-
-          </div>
-          <hr>
-          <div style="text-align: center; font-size: 24px;">Convolutional Neural Network Performance</div>
-            <hr>
-
-          <div class="inverse-section">
-            <div class="image-section">
-                <div class="image-caption">
-                    <img src="./images/ConvNet.png" alt="My Awesome Project">
-                    <p> The first step in the image processing pipeling is to extract features from 
-                        the house pictures. For this project, I chose to extract five features about
-                        the houses, and then use these five features together with the previous 
-                        four features about the house (zip code, square footage, number of bedrooms, 
-                        number of bathrooms) to predict the house's value. 
-                    </p>
+                <div class="col-6">
+                    <h2>Project Overview</h2>
+                    <p>Welcome to my journey into the world of Machine Learning and Data Science, as I unravel the complexities of the housing market in 
+                        'Yillow: A Parody of Zillow'. In this comprehensive project, I dive deep into a vast dataset, cleaning and preparing it meticulously,
+                         to unmask trends and weave patterns. At the heart of this endeavor is my Machine Learning model, the 'Yestimate', engineered to predict
+                          housing prices with precision. Alongside this, I push the boundaries of conventional price prediction methods, exploring the exciting 
+                          potential of Convolutional Neural Networks to gain insights from images of houses. </p>
                 </div>
             </div>
-            <div class="text-section">
-                <p>  I use three convolutional networks and compare their performance. The first 
-                    is the Amir algorithm from a Kaggle competition (credit at bottom of page), and 
-                    the other two algorithms come from the Ahmed paper (all with slight tweaks) to 
-                    work with my filtered dataset. 
-  
+            <div class="row text-center">
+                <div class="col">
+                    <h2>Motivation</h2>
+                    <p>This project stemmed from my deep-seated interest in Machine Learning and AI, 
+                        combined with a fascination for the intricate dynamics of the real estate market.
+                         As a rising senior in college with sights set on becoming an ML/AI/Software Engineer,
+                          I was compelled to craft a project that would not only showcase my skills but also provide
+                           a meaningful platform for learning and exploration. The thought of building a predictive
+                            model for housing prices, inspired by Zillow, struck me as the perfect blend of a 
+                            formidable technical challenge and a practical, real-world application.</p>
                 </div>
-          </div>
-
-          <div class="second-section">
-            <div style="text-align: center; font-size: 24px;">The Performance of Machine Learning on Structured and Picture Data </div>
-            <div class="image-container-half">
-                <div class="image-caption">
-                  <img src="./images/Pic_Train_Performance.png" alt="My Awesome Project">
-                  <p>Training Root Mean Squared Error (RMSE)</p>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <h2>Scope</h2>
+                        <p>The expanse of this project covers the full spectrum of the data science lifecycle,
+                             from the initial stages of data acquisition and cleaning, and exploratory data analysis,
+                              to feature engineering, and finally, to the creation, fine-tuning, 
+                              and evaluation of Machine Learning models. Along this journey, I also delve into the study
+                               of housing market trends and go one step further by applying my model to a 
+                               real-world scenario - finding my dream home. However, I must highlight that while I have
+                                strived to develop a robust model, the primary purpose of this project is educational, 
+                                aimed at exploring data science and machine learning applications rather than rivaling 
+                                professional real estate valuation tools.</p>
+                    </div>
+                    <div class="col-6">
+                        <img src="/images/datascience.jpg" alt="Data Science Lifecycle">
+                    </div>
                 </div>
+                <div class="row">
+                    <div class="col-4">
+                        <img src="/images/data-science-1-temp.png" alt="Data Cleaning Icon">
+                        <h3>Data Science</h3>
+                        <p> Starting with gathering a robust dataset from various housing websites, I embarked on the critical
+                            stages of data cleaning and preprocessing. Afterwards, I developed feature engineering methods to 
+                            increase the information my model would have to work with, and I also explored methods of using 
+                            convolutional neural networks to analyze features from images of houses. </p>
+                    </div>
+                    <div class="col-4">
+                        <img src="/images/ml-temp-1.png" alt="Exploratory Data Analysis Icon">
+                        <h3>Machine Learning</h3>
+                        <p>Machine learning lies at the heart of this project, driving the creation of 'Yestimate'. 
+                            Here, we delve into the depths of various models, testing their ability to predict housing 
+                            prices accurately. Several models are spot-checked, with the most promising ones selected 
+                            for further fine-tuning and optimization. An ensemble approach is also adopted to potentially enhance performance.
 
-                <div class="image-caption">
-                    
-                    
-                  </div>
-                <div class="image-caption">
-                  <img src="./images/Pic_Val_Performance.png" alt="My Awesome Project">
-                  <p> Validation Root Mean Squared Error (RMSE)</p>
+                            In parallel with traditional machine learning models, I also explore the capabilities of
+                             Convolutional Neural Networks (ConvNets) in extracting valuable insights from house images.
+                              This exploration probes into an area less treaded in real estate price prediction and 
+                              offers an exciting potential direction for future research.</p>
+                    </div>
+                    <div class="col-4">
+                        <img src="/images/data-analysis-1.png" alt="Modeling Icon">
+                        <h3>Data Analysis</h3>
+                        <p>In the Data Analysis portion of this project, we pull back the curtain to reveal the intricate
+                             patterns and trends hidden within our dataset. We delve into price trends, tracing the ebbs
+                              and flows of housing prices over time and across various regions, offering a nuanced
+                               understanding of the real estate market's dynamics. Simultaneously, we explore the 
+                               significance of different features in influencing house prices. By determining feature
+                                importance, we can identify the key drivers of property values. In addition, we 
+                                scrutinize the correlations between features, understanding their interconnected
+                                 nature and how these relationships can impact the model's predictions. Lastly,
+                                  we highlight the importance of geographical data. Recognizing that 'location, 
+                                  location, location' often rings true in real estate, we examine the role of 
+                                  geographical factors and their influence on house prices. This comprehensive 
+                                  data analysis stage sets the stage for the subsequent modeling and prediction processes.</p>
+                    </div>
                 </div>
-              </div>
-              <p>With the addition of pictures, our model's performance has improved dramatically. 
-                Our lowest median validation RMSE is now about $125,000, which is a 63% improvement over 
-                our previous model. This is a very promising result, and it shows that pictures can 
-                be used to improve the accuracy of machine learning models. 
-            </p>
+            </div>
+            For 'Yillow', I adopted a comprehensive methodology reflecting a standard data science workflow. 
+            Starting with gathering a robust dataset from various housing websites, I embarked on the critical
+             stages of data cleaning and preprocessing. With the data primed, I moved to 
+             exploratory data analysis to grasp the nuances of the dataset and identify potential trends. 
+             Feature engineering followed suit, preparing the data for Machine Learning models.
+    </body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Yillow vs. Zillow</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <img src="/images/temp.png" alt="Yillow vs Zillow Graph">
+                </div>
+                <div class="col-6">
+                    <h2>Yillow vs. Zillow</h2>
+                    <p>A central piece of this project is 'Yestimate', my custom-built model for predicting housing prices. 
+                        As an educational exercise, I've made it a point to compare the performance of 'Yestimate' against
+                         its inspiration, Zillow's 'Zestimate'. This comparison is not designed to challenge or supersede 
+                         'Zestimate', but rather to understand the strengths and weaknesses of my model, and to identify 
+                         areas for further learning and improvement.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <h2>Home Hunt</h2>
+                    <p>An exciting twist in this project is the 'Home Hunt'. I set out on a virtual quest to find my dream home 
+                        using the Machine Learning model I developed, my personal preferences, and the expansive dataset at my disposal.
+                         This not only serves as a practical demonstration of the model's capabilities but also adds a fun, personal 
+                         touch to the project. I invite you to follow me on this exciting journey as I hunt for the perfect home.</p>
+                </div>
+                <div class="col-6">
+                    <img src="/images/temp.png" alt="Dream Home Image">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>Conclusion</h2>
+                    <p>As we reach the conclusion of the introduction, I hope you're as excited as I am to delve into this project. 
+                        From the intricacies of data science to the nuances of machine learning, from the analysis of From the 
+                        analysis of housing market trends to the hunt for my dream home, 'Yillow: A Parody of Zillow' promises
+                         to be an enriching journey full of insights and learning. While we explore these elements in more depth
+                          in the subsequent pages, my hope is that you will not only gain a deeper understanding of the data 
+                          science workflow but also appreciate the potential and the challenges of applying machine learning techniques to real-world problems. </p>
 
-            <p> Although I could continue to explore how to improve the performance of the machine 
-                learning aspect of this project, I learned through this project the importance of
-                the data used in machine learning. After all, if you give a ML model bad data,
-                you will get bad results. This couldn't be demonstrated more than in this project:
-                the dataset I used was very small, so it is likely that no matter what 
-                ML techniques I could implement, 
-                the model would likely never perform as well as a it could on a much larger dataset.
-                <br>
-                Because of this, I'm going to do more projects that focus on data science.
-                Stay tuned for future projects where I explore 
-                techniques in data science! 
-                
-            </p>
-
-          </div>
-
-
-
-          <div class="second-section">
-            <div style="text-align: center; font-size: 24px;">References </div>
-              <hr>
-              <p> To lean into the idea of a parody-project, this website is meant to look like the Zillow website, 
-                and I used much of their code as well as the main house image on their website to make that happen.
-                <br>
-                The dataset I am using comes from Ahmed and Moustafa in their 2016 paper, 
-                House Price Estimation from Visual and Textual Features, <a href="https://www.researchgate.net/publication/308673665_House_Price_Estimation_from_Visual_and_Textual_Features">here</a>. 
-                Some of the zip codes included in the dataset only contained one 
-                house, so I only kept the zip codes (and corresponding houses) for zip 
-                codes containing 25 or more houses. 
-                <br>
-                One of the ML algorithms used, Amir, came from <a href = "https://www.kaggle.com/code/amir22010/house-price-estimation-from-image-and-text-feature">this </a>Kaggle competition. 
-                <p> Thank you for visiting my website! <br>
-
-                    Made by Brandon Bonifacio, check out my Linkedin! <a href="https://www.linkedin.com/in/bonifaciob/" target="_blank">
-                        <img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-linkedin-square2-512.png" alt="LinkedIn Icon" style="width: 30px;">
-                      </a>
-
-          </div>
-
+                    <p>Please join me in this exploration as we step into the world of data, models, and a fascinating quest for the perfect home!</p>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
-<!-- line 5425 is when second section starts-->
+    
+
