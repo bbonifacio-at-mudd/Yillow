@@ -6873,15 +6873,15 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Data Acquisition - Yillow</title>
+        <title>Feature Engineering Process - Yillow</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <style>
-                figcaption {
-                    color: #666;
-                    font-size: 0.8em;
-                    text-align: center;
-                    margin-top: 5px;
-                }
+            figcaption {
+                color: #666;
+                font-size: 0.8em;
+                text-align: center;
+                margin-top: 5px;
+            }
             body {
                 font-family: Arial, sans-serif;
                 margin: 0;
@@ -6899,7 +6899,7 @@
                 margin: 20px 0;
                 align-items: center;
                 text-align: center;
-                padding: 10px;  /* Add padding here */
+                padding: 10px;
             }
             .col, .col-6, .col-sm-6 {
                 padding: 20px;
@@ -6936,65 +6936,51 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h1>Data Acquisition</h1>
-                    <p>For any data science project, acquiring the right dataset forms the crux of the journey.
-                         In the case of 'Yillow: A Parody of Zillow', our desired dataset needed to be comprehensive,
-                          varied, and representative of the current housing market.</p>
-                    
+                    <h1>Feature Engineering Process</h1>
+                    <p>Feature engineering is the process of using domain knowledge to create new features that make machine learning algorithms work better. In the Yillow Project, we used several techniques to create informative features from our dataset. Here's a summary of our approach.</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
-                    <h2>Data Sources</h2>
-                    <p>ATo continue the theme of being a parody of Zillow, the inspiration behind this project, the data was responsibly
-                        gathered from Zillow's own website. This was performed via respectful web scraping, 
-                        with deliberate multisecond delays between web requests to ensure no undue burden on the Zillow website. 
-                        The process was carried out through original code in Python and was designed to minimize disruption while still
-                         gathering the data necessary for the project.</p>
+                    <h2>Parsing Parking Spaces</h2>
+                    <p>One of the first steps we took was to parse the parking value string. For example, if a record indicated '2 Carport Spots', we extracted the '2' and used this as the numerical value for the 'parking spaces' feature.</p>
                 </div>
             </div>
-            <div class="row h-1000">
-                <div class="col-sm-6 d-flex flex-column">
-                    <h2>Single-Family Houses</h2>
-                    <p>The first dataset is a robust collection of sold single-family houses in Washington, consisting of approximately
-                        2,000 homes. To achieve a varied and representative sample, the data was broken down by the number of bedrooms 
-                        - from one up to five bedrooms. For each category, data from 20 pages was collected, ensuring a well-rounded 
-                        dataset that covered a range of home sizes.</p>
-                </div>
-                <div class="col-sm-6 d-flex flex-column">
-                    <img src="/images/Single-Family.png" alt="Single Family Home">
-                    <figcaption>Single-family homes, like the one pictured above, are standalone structures designed for one household. 
-                        They offer privacy, space, and typically include amenities like private yards and garages.  </figcaption>
-
+            <div class="row">
+                <div class="col">
+                    <h2>Splitting Heating Methods</h2>
+                    <p>Some properties featured multiple heating methods. In such cases, we split these up into separate features, allowing us to better capture the variety of heating options across all properties.</p>
                 </div>
             </div>
-            <div class="row h-100">
-                <div class="col-sm-6 d-flex flex-column h-1000">
-                    <h2>Manufactured Homes</h2>
-                    <p>The second dataset mirrors the first but focuses on manufactured homes instead. This dataset was acquired in a
-                        similar fashion, offering an interesting contrast to the single-family home data.</p>
-                </div>
-                <div class="col-sm-6 d-flex flex-column">
-                    <img src="/images/Manufactured.png" alt="Manufactured Home">
-                    <figcaption>Manufactured homes, as shown in the accompanying picture, are factory-built homes often known for their 
-                        affordability and flexibility. Despite being constructed off-site, they can be just as spacious and comfortable 
-                        as traditional homes, equipped with all essential living facilities.</figcaption>
+            <div class="row">
+                <div class="col">
+                    <h2>Address Character Extraction</h2>
+                    <p>We found key insights could be derived from the property's address. We extracted the unit number, street type (like 'Way' or 'Drive'), street direction (e.g., 'NE' or 'W'), and the name of the street. We also looked for special keywords like 'Lake', 'Riverside', or 'Canyon', and included a boolean feature indicating if the address has a hyphen.</p>
                 </div>
             </div>
-            
+            <div class="row">
+                <div class="col">
+                    <h2>Property Type Identification</h2>
+                    <p>We used string parsing to identify the type of property (such as 'unit' or 'trailer'), adding another dimension to our dataset and potentially capturing important price influences.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h2>Price Normalization</h2>
+                    <p>In order to mitigate the influence of extreme values or outliers, we normalized the price variable. This ensures that the range of this variable doesn't disproportionately affect our machine learning models.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h2>Transforming Qualitative Variables</h2>
+                    <p>For qualitative variables, we transformed them into a format suitable for machine learning. One common approach is one-hot encoding, where each category of a qualitative variable gets its own feature, marked as '1' if the category applies and '0' otherwise. This way, the machine learning algorithm can process this data without implicitly assigning order or magnitude where there isn't any.</p>
+                </div>
+            </div>
             <div class="row">
                 <div class="col">
                     <h2>Conclusion</h2>
-                    <p>These two datasets, meticulously and respectfully collected, provided the raw materials for this project.
-                        They offered a solid foundation for in-depth data analysis and robust model development, enabling me to
-                         uncover intriguing insights about the housing market, develop 'Yestimate', and ultimately embark on the hunt for my dream home.
-
-                       With our data now acquired, let's dive into the Data Science subpage to explore the next steps in the journey - data cleaning, preprocessing, and feature engineering.</p>
-                    <img src="/images/Acquisition.png" alt="Data Gathering Process">
-                    <figcaption>All ~2000 single-family and ~2000 manufactured homes were put in a csv with their price, <br>
-                         zestimate, zipcode, bathrooms, bedrooms, living area, address, city, state, home type, longitude, latutude, and url.
-                    </figcaption>
-                    <a href="https://bbonifacio-at-mudd.github.io/Yillow/data/fengineering.html" class="next-page">Next: Feature Engineering Subpage</a>
+                    <p>With these feature engineering techniques, we were able to prepare our dataset to better fit into our machine learning models. By crafting these new features, we could capture more nuances in the data, potentially improving the performance of our predictive models.</p>
+                    <a href="NextPageLink.html" class="next-page">Next: [Next Page Name]</a>
                 </div>
             </div>
         </div>
