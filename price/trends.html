@@ -6929,17 +6929,33 @@
             <div class="row">
                 <div class="col">
                     <h2>Spearman Correlation Analysis</h2>
-                    <img src="/images/spearman_correlation.png" alt="Spearman correlation graph">
-                    <p>In addition to the individual relationships, we have also conducted a Spearman correlation analysis to investigate the strength and direction of a monotonic relationship between our variables. This non-parametric measure of rank correlation considers both the direction and the magnitude of the variables, making it an effective tool for our analysis.</p>
+                    <img src="/images/Spearman.png" alt="Spearman correlation graph">
+                    <p>In addition to the individual relationships, we have also conducted a Spearman correlation analysis 
+                        to investigate the strength and direction of a monotonic relationship between our variables. However, 
+                        we must exercise extreme caution when using plots like these, because they can be misleading. For example, 
+                        according to this plot, the Street Name a house is on has almost as much significance as the living area.
+                        <br>
+                        Why do we see this? This is due to something called "overfitting." In other words, if a categorical variable like 
+                        Street Name has a lot of unique values, it will have a high correlation with the price. This is because the model
+                        will try to fit a line to each of the unique values, and the more unique values there are, the more likely it is
+                        that one of them will have a high correlation with the price. This is why we must be careful when interpreting
+                        spearman plots like these.
+                        <br>
+                        So, what can we get from this graph? We can see that the number of bathrooms, bedrooms, and living area have a strong
+                        positive correlation with the price of a home, regardless of home type. This reaffirms our observations from the individual analysis,
+                        adding weight to the perceived value these features have in relation to the price of a home. </p>
             
-                    <p>As seen in the Spearman correlation graph above, there's a strong positive correlation between price and the number of bathrooms, bedrooms, and living area, regardless of home type. This reaffirms our observations from the individual analysis, adding weight to the perceived value these features have in relation to the price of a home.</p>
                 </div>
             </div>
             
             <div class="row">
                 <div class="col">
                     <h2>Conclusion</h2>
-                    <p>Through our analysis, we have uncovered insightful trends in how the number of bedrooms and bathrooms, as well as living area, affect home prices. The Spearman correlation graph further confirms the relationships between these features and home prices. These trends vary between single-family and manufactured homes, providing valuable insights for potential homeowners and investors. Stay tuned as we continue to dive deeper into the data in our subsequent pages.</p>
+                    <p>Through our analysis, we have uncovered insightful trends in how the number of bedrooms and bathrooms, 
+                        as well as living area, affect home prices. The Spearman correlation graph further confirms the 
+                        relationships between these features and home prices. These trends vary between single-family and 
+                        manufactured homes, providing valuable insights for potential homeowners and investors. Stay tuned 
+                        as we continue to dive deeper into the data in our subsequent pages.</p>
                     <a href="NextPageLink.html" class="next-page">Next: [Next Page Name]</a>
                 </div>
             </div>
