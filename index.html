@@ -6838,11 +6838,12 @@
             figcaption {
                 color: #666;
                 font-size: 0.8em;
+                font-family: 'Times New Roman', serif; 
                 text-align: center;
                 margin-top: 5px;
             }
             body {
-                font-family: Arial, sans-serif;
+                font-family: 'Times New Roman', serif; 
                 margin: 0;
                 padding: 0;
                 background-color: #f4f4f4;
@@ -6852,6 +6853,7 @@
                 margin: 0 auto;
                 padding: 20px;
             }
+            
             .row {
                 display: flex;
                 flex-wrap: wrap;
@@ -6867,6 +6869,7 @@
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
             }
             h1, h2 {
+                font-family: 'Times New Roman', serif; 
                 color: #333;
                 margin-bottom: 20px;
             }
@@ -6896,11 +6899,46 @@
             <div class="row">
                 <div class="col">
                     <h1>Welcome to Yillow!</h1>
-                    <p>Welcome to Yillow Project, a deep dive into the realm of machine learning and data science, with a focus on the real estate market. We aim to unearth the underlying patterns of housing prices and engage in the thrilling quest of finding the perfect home.</p>
+                    <p>Hi! My name is Brandon, and welcome to my little independent project. In this project, I wanted to showcase 
+                        some of my skills in data science, machine learning, and general ability to complete a project, 
+                        while also learning more about buying a house, which (fingers crossed) I'll do later in life. So, the natural 
+                        choice was to create a parody-style project of Zillow. <p>
                     <img src="./images/project-overview.jpg" alt="Project Overview">
                     <figcaption>Project Overview</figcaption>
                 </div>
             </div>
+
+                <!-- New row starts here -->
+            <div class="row">
+                <!-- Single Title for both columns -->
+                <div class="col-sm-12 col">
+                    <h2>Homes Analysis</h2>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Column 1 -->
+                <div class="col-sm-6 col">
+                    <h3>Single-family Homes</h3>
+                    <img src="./../images/Single-Family-Spearman.png" alt="Single-family spearman">
+                    <p>The Spearman plot for single-family homes indicates the rank-based correlation coefficient between various features. This visual tool helps to reveal potential relationships between pairs of features that might not be immediately apparent.</p> 
+                    <img src="./../images/Single-Family-Heatmap.png" alt="Single-family heatmap">
+                    <p>The heatmap for single-family homes presents the correlation between the features in a color-coded matrix, with warmer colors indicating a stronger positive correlation and cooler colors indicating a stronger negative correlation.</p>
+                </div>
+                <!-- Column 2 -->
+                <div class="col-sm-6 col">
+                    <h3>Manufactured Homes</h3>
+                    <img src="./../images/Manufactured-Spearman.png" alt="Manufactured spearman">
+                    <p>The Spearman plot for manufactured homes gives us an insight into the relationships between different features. It's a powerful tool for identifying dependencies among features in the dataset. Dummy text here to make the columns the same size. </p>
+                    <img src="./../images/Manufactured-Heatmap.png" alt="Manufactured heatmap">
+                    <p>The heatmap for manufactured homes showcases the correlations between different features, providing a visually intuitive representation of the data. The color intensity in the heatmap can help us discern the strength of the correlations.</p>
+                </div>
+            </div>
+
+
+
+
+
+
             <div class="row">
                 <div class="col">
                     <h2>Our Journey</h2>

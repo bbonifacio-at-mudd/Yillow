@@ -6916,6 +6916,22 @@
             .lowered-image {
                 margin-top: 5px; 
             }
+            .property-details {
+                padding: 10px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                background-color: #f9f9f9;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+                margin-top: 15px;
+            }
+
+            .property-details h4 {
+                margin-bottom: 10px;
+            }
+
+            .property-details p {
+                margin-bottom: 5px;
+            }
         </style>
     </head>
     <body>
@@ -6931,7 +6947,11 @@
             <div class="row">
                 <div class="col">
                     <h2>Introduction</h2>
-                    <p>Welcome to the Home Hunt! Here at the Yillow Project, we understand that finding the perfect house involves more than just browsing through listings. It's about leveraging data and insights to identify the best deals and most suitable properties. In this section, we'll embark on a journey to find houses that aren't just spacious and luxurious, but also offer excellent value for money.</p>
+                    <p>Welcome to the Home Hunt! Here at the Yillow Project, we understand that finding the 
+                        perfect house involves more than just browsing through listings. It's about leveraging 
+                        data and insights to identify the best deals and most suitable properties. In this section, 
+                        we'll embark on a journey to find houses that aren't just spacious and luxurious, but also offer
+                         excellent value for money.</p>
                 </div>
             </div>
         
@@ -6939,15 +6959,9 @@
             <div class="row">
                 <div class="col">
                     <h2>Defining the Dream Home</h2>
-                    <p>Firstly, we need to set our criteria for what constitutes a dream home. In this case, we're aiming high - we're looking for houses with at least three bedrooms and three bathrooms, boasting a generous living area greater than 2000 square feet. This is where the comfort of spacious living meets the convenience of additional amenities.</p>
-                </div>
-            </div>
-        
-            <!-- Section 2: Deploying the Yestimate -->
-            <div class="row">
-                <div class="col">
-                    <h2>Deploying the Yestimate</h2>
-                    <p>With our criteria set, we're now ready to unleash the power of our Yestimate model. By webscraping the Zillow results page for houses that match our specifications, we can use the Yestimate to predict the prices of these houses. This powerful tool gives us an estimated market value for each house based on its specific features.</p>
+                    <p>Firstly, we need to set our criteria for what constitutes a dream home. In this case, 
+                        we're aiming high - we're looking for houses with at least three bedrooms, three bathrooms, and
+                        boasting a generous living area greater than 2000 square feet. </p>
                 </div>
             </div>
         
@@ -6955,15 +6969,41 @@
             <div class="row">
                 <div class="col">
                     <h2>Spotting Under-Valued Gems</h2>
-                    <p>Remember, our goal is to find the best deal, and for that, we need to dig a little deeper. We'll compare the Yestimate with the actual listed price of each house. If a house's Yestimate is significantly higher than its listed price, that's a good sign! It suggests that the house might be under-valued, offering more value than what's reflected in its price tag.</p>
+                    <p>Remember, our goal is to find the best deal, and for that, we need to dig a little deeper. We'll 
+                        compare our Yestimate with the actual listed price of each house. If a house's Yestimate is significantly 
+                        higher than its listed price, that's a good sign! It suggests that the house might be under-valued,
+                         offering more value than what's reflected in its price tag. With this, the "best" homes I found are given just below....</p>
                 </div>
             </div>
         
             <!-- Section 4: Finding the Dream Home -->
             <div class="row">
-                <div class="col">
-                    <h2>Finding the Dream Home</h2>
-                    <p>With this approach, we sift through the under-valued houses, homing in on the properties that offer the best value. Using our detailed analysis and the insights from our Yestimate model, we finally identify our dream home - a property that not only fits our luxurious living criteria but also promises a fantastic deal.</p>
+                <div class="col-sm-6">
+                    <h3>"Best" Single-Family Home</h3>
+                    <img src="./images/Regular_Dream_Home.png" alt="Single-family spearman">
+                    <div class="property-details">
+                        <h4>Property Details</h4>
+                        <p><strong>Sell Price:</strong> $402,866</p>
+                        <p><strong>Yestimate:</strong> $569,474</p>
+                        <p><strong>Zestimate:</strong> $738,900</p>
+                        <p><strong>Bedrooms:</strong> 5</p>
+                        <p><strong>Bathrooms:</strong> 3</p>
+                        <p><strong>Area:</strong> 3,750 sqft</p>
+                        <p><strong><a href="https://www.zillow.com/homedetails/11402-234th-St-E-Graham-WA-98338/49182928_zpid/?">Zillow Link</a></strong></p>
+                    </div>
+                    <p>This home ... </p> 
+                </div>
+                <div class="col-sm-6">
+                    <h3>"Best" Manufactured Home</h3>
+                    <img src="./images/Manufactured_Dream_Home.png" alt="Single-family spearman">
+                    <div class="property-details">
+                        <h4>Property Details:</h4>
+                        <p><strong>Bedrooms:</strong> 3</p>
+                        <p><strong>Bathrooms:</strong> 2</p>
+                        <p><strong>Area:</strong> 2000 sq.ft</p>
+                        <p><strong>Price:</strong> $350,000</p>
+                    </div>
+                    <p>This home ... </p>
                 </div>
             </div>
         
@@ -6971,7 +7011,10 @@
             <div class="row">
                 <div class="col">
                     <h2>Conclusion</h2>
-                    <p>This home hunt is an exciting demonstration of how the Yillow Project can be used to make informed and intelligent property decisions. By combining data scraping, predictive modeling, and insightful analysis, we've transformed the traditional property hunt into a sophisticated, data-driven process. Here's to finding your dream home with the Yillow Project!</p>
+                    <p>This home hunt is an exciting demonstration of how the Yillow Project can be used to make 
+                        informed and intelligent property decisions. By combining data scraping, predictive modeling, 
+                        and insightful analysis, we've transformed the traditional property hunt into a sophisticated, 
+                        data-driven process. Here's to finding your dream home with the Yillow Project!</p>
                 </div>
             </div>
             
