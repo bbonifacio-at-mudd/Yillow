@@ -6471,7 +6471,7 @@
                     <h2>What I Accomplished</h2>
                     <p> This project started with the creation of a dataset of over 5,000 houses with 30 features, 
                         a task that took a culmination of many hours of respectful webscraping, data cleaning, and feature
-                        engineering. I also explored using using ConvNets to extract more features and found 
+                        engineering. I also explored using ConvNets to extract more features and found 
                         that this enhanced the accuracy of a smaller dataset, but this was not implemented because of the difficulty associated 
                         with obtaining the images for the 5,000 houses and also the processing power of my laptop. 
                        <br><br>                         
@@ -6498,21 +6498,20 @@
             <div class="row">
                 <div class="col">
                     <h2>What I Learned</h2>
-                    <p> This project started with the creation of a dataset of over 5,000 houses with 30 features, 
-                        a task that took a culmination of multiple hours of respectful webscraping, data cleaning, and feature
-                        engineering. We also explored using using ConvNets to extract more features and found 
-                        that this enhanced the accuracy of a Kaggle dataset, but this was not implemented because of the difficulty associated 
-                        with obtaining the images for the 5,000 houses and also the processing power by my laptop. 
-                        <br>                         
-                        We then used this dataset to tune and train nine machine learning models, and then we 
-                        ensembled multiple models together to create the Yestimate, which achieved a testing mean absolute error that is only 
-                        2.1 times that of the real Zestimate - a performance I thought was far out of reach. Next, we performed a thorough data analysis
-                        to understand what house features were important in determining house prices, and we also explored how these features correlated
-                        with each other. 
-                        <br> 
-                        We then used this data to create interactive maps that allowed us to visualize the spatial distribution of house prices and
-                        how they changed over time. Finally, we used our Yestimate model to find houses that were undervalued and matched our dream home's
-                        criteria. 
+                    <p>  
+                        The biggest lesson that I learned from this project is just how important it is to have a good dataset. I spent so much time making a dataset, then trying
+                        it on the ML model, then going back and trying to make it better, and then repeating this process over and over again. In the future, I'll be sure to spend 
+                        extra time making the data as good as it can be because it will save me a lot of time in the long run.<br><br>
+                        
+                        
+                        I've never webscraped before, but it was fun to learn how to do it. I cemented my abilities to clean and engineer data as well as
+                        tuning, training, and ensembling machine learning and ConvNet models, and I even learned how to use Optuna, which I haven't used before. I also gained 
+                        a lot of experience in data analysis and visualization, which I think is a very important skill to have and taught me a lot about what exactly makes
+                        houses expensive. <br><br>
+                        On top of this, I created an interactive map with the use of Folium, which I had never used before. In terms of the Home Hunt, I learned that there 
+                        really are some hidden gems when it comes to buying houses, and I think that this project has made me much more prepared for when I (fingers crossed) 
+                        buy my own home one day. I also learned a lot about web development and how to create a website that is both engaging and informative.
+                        </p>
                     </p>
                 </div>
             </div>
@@ -6522,75 +6521,41 @@
             <div class="row">
                 <div class="col">
                     <h2>Challenges & What I Could've Done Better</h2>
-                    <p> This project started with the creation of a dataset of over 5,000 houses with 30 features, 
-                        a task that took a culmination of multiple hours of respectful webscraping, data cleaning, and feature
-                        engineering. We also explored using using ConvNets to extract more features and found 
-                        that this enhanced the accuracy of a Kaggle dataset, but this was not implemented because of the difficulty associated 
-                        with obtaining the images for the 5,000 houses and also the processing power by my laptop. 
-                        <br>                         
-                        We then used this dataset to tune and train nine machine learning models, and then we 
-                        ensembled multiple models together to create the Yestimate, which achieved a testing mean absolute error that is only 
-                        2.1 times that of the real Zestimate - a performance I thought was far out of reach. Next, we performed a thorough data analysis
-                        to understand what house features were important in determining house prices, and we also explored how these features correlated
-                        with each other. 
-                        <br> 
-                        We then used this data to create interactive maps that allowed us to visualize the spatial distribution of house prices and
-                        how they changed over time. Finally, we used our Yestimate model to find houses that were undervalued and matched our dream home's
-                        criteria. 
+                    <p> 
+                        The biggest challenge I faced was that I had to do so much more than just machine learning and data science. Although ML and data science are what I've 
+                        been trained to do, 
+                        I had to do so much just so I could get to the point where I had a csv of data that I could clean, engineer, and train ML models on! Then, I couldn't just 
+                        stop there -- I had to perform in-depth analyses, make an interactive map, draw real-world conclusions, and then present it all on a website! For someone 
+                        who thought that this project would be a breeze, I was in for a rude awakening and had to learn so many skills in order to make Yillow a reality. 
+
+                        <br><br>
+                        There were multiple ways this project could have been better, and the first one that comes to mind is if I could have also 
+                        scraped the images of the houses and used ConvNets to extract more features from them. I think that this would have improved the accuracy of the model
+                        and also been a really cool addition to the project. Furthermore, there were more features that I could have webscraped if 
+                        I spent more time on it and had better foresight, like Walkability Scores, elevation, distances from certain landmarks, neighbor's home prices, etc. 
+                        Furthermore, the comparison of my Yestimate to Zillow's Zestimate is hardly fair - my dataset is made to work on a very small and precleaned dataset of houses 
+                        whose prices follow nice distributions. Zillow's Zestimate has to work for <em>all</em> houses, so naturally it's going to be at a disadvantage to my Yestimate when it
+                        comes to this small subset of houses I made. This makes my Yestimate seem much better than it actually is, and if I were to continue this project, 
+                        I would want to expand my dataset greatly so I could go toe-to-toe with Zillow and predict all types of houses along with outliers. 
+
                     </p>
                 </div>
             </div>
 
             
-                    
-    
-            <!-- Section 2: Machine Learning and the Yestimate -->
-            <div class="row">
-                <div class="col">
-                    <h2> <!-- Section 2: Machine Learning and the Yestimate -->
-                        <h2>Machine Learning and the Yestimate</h2>
-                        <p>Next, we delved into the heart of our project – developing the 'Yestimate', a machine learning model capable of predicting house prices. We trained and tested various models, fine-tuned parameters, and adopted an ensemble approach for improved performance. The 'Yestimate' stands as a testament to the power of machine learning and its potential in real-world applications.</p>
-                    </div>
-                </div>
-        
-                <!-- Section 3: Data Analysis -->
-                <div class="row">
-                    <div class="col">
-                        <h2>Data Analysis</h2>
-                        <p>Alongside the development of the 'Yestimate', we conducted a thorough data analysis. This allowed us to understand the intricate dynamics of the housing market, tracing housing prices' trends over time and across different regions. We also identified key features influencing house prices and examined the interplay between various factors. This holistic view of our dataset set the stage for successful modeling and accurate predictions.</p>
-                    </div>
-                </div>
-        
-                <!-- Section 4: Interactive Maps -->
-                <div class="row">
-                    <div class="col">
-                        <h2>Interactive Maps</h2>
-                        <p>Our analysis was enriched with the integration of interactive maps. These maps provided a spatial dimension to our data, offering an engaging way to visualize housing price variations across regions. Our spatial analysis echoed the time-tested real estate mantra: 'Location, Location, Location'.</p>
-                    </div>
-                </div>
-        
-                <!-- Section 5: The Home Hunt -->
-                <div class="row">
-                    <div class="col">
-                        <h2>The Home Hunt</h2>
-                        <p>We applied our learning to a practical scenario in the 'Home Hunt'. Using the Yestimate model and data scraping, we set out to find under-valued properties that matched our dream home's criteria. This application served as a testament to the real-world utility of our machine learning and data science skills.</p>
-                    </div>
-                </div>
+                
         
                 <!-- Conclusion -->
                 <div class="row">
                     <div class="col">
-                        <h2>Summary</h2>
-                        <p>As we wrap up, it's vital to reflect on the purpose of this project – it was an educational endeavor aiming to explore the world of data science, experiment with machine learning applications, and apply these to a real-world scenario. While we strived for a robust and accurate model, our primary focus was learning, exploring, and pushing the boundaries of what we can achieve with data.</p>
-                        <p>We hope that 'Yillow: A Parody of Zillow' has been insightful, shedding light on the data science workflow and the potential of machine learning. As we continue our journey in this exciting field, we look forward to unearthing more knowledge and continuing to learn.</p>
-                    </div>
-                </div>
-        
-                <!-- Continue journey -->
-                <div class="row">
-                    <div class="col">
-                        <a href="#" class="home-page">Home Page</a> <!-- Add the correct link to the Home Page -->
-                        <a href="#" class="home-page">Explore More Projects</a> <!-- Add the correct link to Explore More Projects Page -->
+                        <h2>Final Note</h2>
+                        <p>As I wrap up, it's vital to reflect on the purpose of this project - it was an educational endeavor aiming to explore
+                             the world of data science, implement machine learning techniques, and apply these to a real-world scenario.
+                              While I strived for a robust and accurate model, my primary focus was learning, exploring, and pushing the boundaries 
+                              of what I can achieve with data.</p>
+                        <p>I hope that Yillow has been insightful, shedding light on the data science workflow and the 
+                            potential of machine learning. As I start my full-time career after graduation next spring,
+                             I look forward to unearthing more knowledge and continuing to learn.<br><br> <a href="https://bbonifacio-at-mudd.github.io/Yillow/references.html" class="home-page">Next Page: References</a></p>
                     </div>
                 </div>
         </div>
