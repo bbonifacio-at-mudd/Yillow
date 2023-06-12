@@ -6466,13 +6466,13 @@
             <div class="row">
                 <div class="col">
                     <h1>Correlation Analysis</h1>
-                    <p> The next step in our data analyses is to explore the correlations between price and the main seven features of our dataset: 
+                    <p> The next step in our data analyses is to explore the correlations among price as well as the main seven features of our dataset: 
                         longitude, latitude, living area, bedrooms, bathrooms, zipcode, and city. Furthermore, I think it would also be 
-                        interesting to see how the Zestimate is affected by these. </p>
-                    <p>Correlation analysis is a statistical technique used to understand the strength and direction 
-                        of the relationship between two variables. For our purposes, the correlation metric we're going to use to measure correlation is 
-                        the Spearman correlation. The reason we're using Spearman and not Pearson is because the Pearson coefficient makes certain assumptions
-                        about the data, like it being normally distributed and having linear relationships, while the Spearman correlation doesn't. </p>
+                        interesting to see how the Zestimate is affected by these. Since the Zestimate is supposed to approximate a house's true value, I wonder how 
+                        a feature's correlation with price will differ from a feature's correlation with the Zestimate... </p>
+                    <p> For our purposes, the correlation metric we're going to use to gauge correlation is 
+                        the Spearman correlation coefficient. The reason we're using Spearman and not Pearson is because the Pearson coefficient makes certain assumptions
+                        about the data, like it being normally distributed and having linear relationships, while the Spearman correlation doesn't.</p>
                 </div>
             </div>
     
@@ -6480,18 +6480,28 @@
             <div class="row">
                 <div class="col-sm-6">
                     <h3>Single-family Homes</h3>
-                    <img src="./../images/Single-Family-Spearman.png" alt="Single-family spearman">
-                    <p>The Spearman plot for single-family homes indicates the rank-based correlation coefficient between various features. This visual tool helps to reveal potential relationships between pairs of features that might not be immediately apparent.</p> 
-                    <img src="./../images/Single-Family-Heatmap.png" alt="Single-family spearman">
+                    <img src="./../images/Single-Family-Spearman2.png" alt="Single-family spearman">
+                    <p>The Spearman plot for single-family homes indicates the rank-based correlation coefficient 
+                        between various features. This visual tool helps to reveal potential relationships between 
+                        pairs of features that might not be immediately apparent.</p> 
+                        <img src="./../images/Single-Family-Spearman-Zest2.png" alt="Single-family spearman">
+                        <p>The Spearman plot for single-family homes indicates the rank-based correlation coefficient 
+                            between various features. This visual tool helps to reveal potential relationships between 
+                            pairs of features that might not be immediately apparent.</p> 
+                    <img src="./../images/Single-Family-Heatmap2.png" alt="Single-family spearman">
                     <p>The heatmap for single-family homes presents the correlation between the features in a color-coded matrix, with warmer colors indicating a stronger positive correlation and cooler colors indicating a stronger negative correlation.</p>
                      
                 </div>
                 <div class="col-sm-6">
                     <h3>Manufactured Homes</h3>
-                    <img src="./../images/Manufactured-Spearman.png" alt="Single-family spearman">
+                    <img src="./../images/Manufactured-Spearman2.png" alt="Single-family spearman">
                     <p>The Spearman plot for manufactured homes gives us an insight into the relationships between
                          different features. It's a powerful tool for identifying dependencies among features in the dataset. Dummy text here to make the columns the same size. </p>
-                    <img src="./../images/Manufactured-Heatmap.png" alt="Single-family spearman">
+                    <img src="./../images/Manufactured-Spearman-Zest2.png" alt="Single-family spearman">
+                    <p>The Spearman plot for single-family homes indicates the rank-based correlation coefficient 
+                        between various features. This visual tool helps to reveal potential relationships between 
+                        pairs of features that might not be immediately apparent.</p> 
+                    <img src="./../images/Manufactured-Heatmap2.png" alt="Single-family spearman">
                     <p>The heatmap for manufactured homes showcases the correlations between different features, providing a visually intuitive representation of the data. The color intensity in the heatmap can help us discern the strength of the correlations.</p>
                 </div>
             </div>
