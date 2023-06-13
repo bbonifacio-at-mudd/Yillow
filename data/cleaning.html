@@ -6411,7 +6411,7 @@
                 margin-top: 5px;
             }
             body {
-                font-family: Arial, sans-serif;
+                font-family: "Times New Roman", serif;
                 margin: 0;
                 padding: 0;
                 background-color: #f4f4f4;
@@ -6466,29 +6466,32 @@
                 <div class="col">
                     <h1>Data Cleaning Process</h1>
                     <p>Cleaning data is an essential process in any data science project. 
-                        It ensures data quality and improves the reliability of our analysis. 
-                        Here's a look at how we cleaned our dataset for the Yillow Project.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <h2>Removing Duplicates</h2>
-                    <p>First and foremost, we made sure there were no duplicate entries in our dataset.
-                         Duplicate records can skew the analysis and provide inaccurate results.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <h2>Handling Missing Values</h2>
-                    <p>Next, we dealt with missing values. Wherever data was missing, we assigned a 'NoValue' tag. 
-                        This way, we retain the record while acknowledging the absence of certain information.</p>
+                        It ensures data quality and improves the reliability of my analysis. 
+                        Here's a look at how I cleaned my dataset for Yillow.</p>
+                        
+                    <p>First and foremost, I made sure there were no duplicate entries in our dataset.
+                         Duplicate records can skew the analysis and provide inaccurate results, but thankfully there were actually 
+                        0 duplicates!</p>
+                    <p>Next, I dealt with missing values in the secondary features. Wherever data was missing, I assigned a 'NoValue' tag. This
+                        would ensure that, during the feature engineering process, features with missing values would get their own category/assignment. 
+                        By doing this, I retained the record while acknowledging the absence of certain information.</p>
+
+                     <p>Lastly, I ensured data consistency. It's vital that the same type of data
+                            is represented consistently across the dataset. For example, if living area
+                             is represented in square feet, I made sure it's not accidentally 
+                             entered as square meters in some instances.</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
                     <h2>Outlier Detection and Removal</h2>
-                    <p>Outliers can often skew the results of an analysis. We used box-and-whisker plots to
-                         visualize the range of our data and identify these outliers.</p>
+                    <p> Outliers can be killers when it comes to predictive models because they can really skew predictions. The real Zestimate 
+                        has to take into account outliers, but because of the small dataset of Yillow and also because the Yestimate is supposed to be a 
+                        predictive model to help people (me, in particular) buy a house, I am going to assume that I'm not very interested in houses that are super
+                        overpriced. Because of this, I decided to remove outliers from the dataset. To do this, I used box-and-whisker plots to identify outliers and then 
+                        removed them. Although this makes the Yestimate less effective on outliers, it makes it more effective on the majority of houses. 
+                        
+                        </p>
                     <div class="row">
                         <div class="col-sm-6">
                             <img src="./../images/outliers-boxplot.png" alt="Box-and-whisker plot for prices of houses without outliers removed">
@@ -6499,35 +6502,29 @@
                             <img src="./../images/nooutliers-boxplot.png" alt="Box-and-whisker plot with outliers removed">
                             <figcaption>After identifying these outliers, we decided to remove them for 
                                 a more accurate analysis. The resulting plot is much more compact and 
-                                representative of most houses in our dataset.</figcaption>
+                                representative of most houses in my dataset.</figcaption>
                         </div>
                     </div>
                     <img src="./../images/29millionhouse.png" alt="Example picture of outlier house">
                     <figcaption>A notable outlier was a rather plain house priced at a staggering 29 million 
-                        dollars! If you think you can figure out why this is priced so staggeringly high, feel free to check it out yourself: 
-                        <a href="https://www.zillow.com/homedetails/1733-S-69th-Ave-9-Yakima-WA-98908/72076700_zpid/">link to house</a>.
-                        
-                        Removing such outliers helps us to create a model that is more 
+                        dollars! If you think you can figure out why this is priced so crazy high, feel free to check it out yourself: 
+                        <a href="https://www.zillow.com/homedetails/1733-S-69th-Ave-9-Yakima-WA-98908/72076700_zpid/">link to house</a>. If this had stayed in the datset, the 
+                        Yestimate would have exploded trying to predict it! Removing such outliers helps us create a model that is more 
                         representative of typical houses. </figcaption>
                 </div>
-            </div>            
-            <div class="row">
-                <div class="col">
-                    <h2>Ensuring Data Consistency</h2>
-                    <p>Lastly, we ensured data consistency. It's vital that the same type of data
-                         is represented consistently across the dataset. For example, if living area
-                          is represented in square feet, we made sure it's not accidentally 
-                          entered as square meters in some instances.</p>
-                </div>
-            </div>
+
             <div class="row">
                 <div class="col">
                     <h2>Summary</h2>
-                    <p>With these steps, we made sure our data was clean and ready for
-                         further analysis. This process enhances the reliability of our
-                          subsequent findings and ensures our models are built upon a
-                           solid foundation of quality data.</p>
-                    <a href="NextPageLink.html" class="next-page">Next: Feature Engineering</a>
+                    <p>With these steps, I made sure my data was clean and ready for
+                         feature engineering. This process enhances the reliability of my
+                          subsequent findings and ensures the Yestimate is built upon a
+                           solid foundation of quality data. However, in doing so, I also make the Yestimate work 
+                            much less effectively on those outliers I removed. As I'm going through the data science process, I keep making the data 
+                            represent a smaller and smaller subset of all houses, such as limiting the dataset to houses in Washington, only. However, 
+                            I think that this is justified because a model that works well on a small subset of data is better than a model that doesn't work well 
+                            on any of the data.</p>
+                    <a href="https://bbonifacio-at-mudd.github.io/Yillow/data/fengineering.html" class="next-page">Next Page: Feature Engineering</a>
                 </div>
             </div>
         </div>
