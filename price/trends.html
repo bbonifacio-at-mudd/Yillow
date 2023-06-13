@@ -6412,7 +6412,7 @@
             }
 
             body {
-                font-family: Arial, sans-serif;
+                font-family: 'Times New Roman', serif; 
                 margin: 0;
                 padding: 0;
                 background-color: #f4f4f4;
@@ -6426,7 +6426,6 @@
                 display: flex;
                 flex-wrap: wrap;
                 margin: 20px 0;
-                align-items: center;
                 text-align: center;
                 padding: 10px;
             }
@@ -6465,45 +6464,65 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h1>Price vs. Features Analysis</h1>
-                    <p>Welcome to our detailed analysis of housing prices against key features such as the number of bedrooms and bathrooms. We've separated our analysis by home type – single-family homes and manufactured homes – to provide insights into how these factors influence prices within each category. Let's dive into the data.</p>
+                    <h1>Price Trends For Bedrooms, Bathrooms, & Living Area</h1>
+                    <p>Welcome to my detailed analysis of how house prices change against bedrooms, bathrooms, and living area. 
+                        I chose to go in-depth on these three features because I personally think they are the most important 
+                        characteristics of a house. I've separated my analysis by home type, with single family homes on the left 
+                        and manufactured homes on the right, to better illustrate how the trends differ based on the type of house. For this analysis,
+                        I chose to not exclude outliers because I wanted to see the full range of data. Keep in mind that we will perform a feature-wise 
+                        comparison of how much each feature correlates with price on the next page, so for now we are just focusing on the general trends. 
+                         </p>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-sm-6">
-                    <h3>Single-family Homes</h3>
-                    <img src="./../images/RegularPricevsBathrooms.png" alt="Single-family homes bathrooms graph">
-                    <p>We observed a clear correlation between the number of bathrooms and the price in single-family homes. Homes with more bathrooms tend to command a higher price, likely due to the additional convenience and perceived luxury they provide.</p>
-                    <img src="./../images/RegularPricevsBedrooms.png" alt="Single-family homes bedrooms graph">
-                    <p>The trend for bedrooms in single-family homes is quite similar to that of bathrooms.
-                         With each additional bedroom, the average home price increases, signaling the 
-                         premium homeowners place on this feature. Furthermore, the single-family homes seem to be more expensive than manufactured homes, on average. </p>
-                    <img src="./../images/LivingareaRegular.png" alt="Single-family homes LivingArea graph">
-                    <p>Here is graph for Living area. As we can see, prices increase as living area increases.
+                    <h3>Single Family Homes</h3>
+                    <img src="./../images/RegularPricevsBathrooms.png" alt="Single Family homes bathrooms graph">
+                    <p>Here, we observe a clear correlation between the number of bathrooms and the price in single family homes, with the 
+                        price of the single family home increasing as the number of bedrooms increases. This makes sense - I'd certainly pay 
+                        more for a home with more bathrooms. </p>
+                    <img src="./../images/RegularPricevsBedrooms.png" alt="Single Family homes bedrooms graph">
+                    <p>The trend for bedrooms in single family homes is quite similar to that of bathrooms.
+                         With each additional bedroom, the median home price increases, signaling the 
+                         premium homeowners place on this feature. Furthermore, the single family homes seem 
+                         to be more expensive than manufactured homes, on average. As an interesting note, it seems that 
+                        the median home price seems to somewhat plateu after 4 bedrooms for both single family 
+                        and manufactured homes.  </p>
+                    <img src="./../images/LivingareaRegular.png" alt="Single Family homes LivingArea graph">
+                    <p>Here is a plot for living area. As we can see, prices increase as living area increases - no surprises there. However, 
+                        as shown by how the dots are colored by the number of bedrooms in the house, there seems to be some correlation between
+                        the number of bedrooms and the living area. This will be explored more on the next page. 
                         
                      </p>
                 </div>
                 <div class="col-sm-6">
                     <h3>Manufactured Homes</h3>
                     <img src="./../images/ManufacturedPricevsBathrooms.png" alt="Manufactured homes bathrooms graph">
-                    <p>For manufactured homes, we see a similar, but less pronounced, pattern with regards to the number of bathrooms. The increase in price is not as steep as in single-family homes, likely due to the inherent characteristics of manufactured homes, which are typically smaller and less customizable.</p>
+                    <p>For manufactured homes, we see a similar, but less pronounced, pattern with regards to the number of bathrooms. 
+                        The increase in price is not as steep as in single family homes. This will also be seen on the next page, where (as a spoiler)
+                        the correlation between bathrooms and price is noticeably lower for manufactured houses compared to single family houses. </p>
                     <img src="./../images/ManufacturedPricevsBedrooms.png" alt="Manufactured homes bedrooms graph">
-                    <p>Comparing the number of bedrooms to the home price in manufactured homes reveals a similar trend to that of single-family homes. However, the average price of manufactured homes with the same number of bedrooms is lower, reflecting the general market perception of manufactured homes as a more affordable housing option.</p>
+                    <p>Comparing the number of bedrooms to the home price in manufactured homes reveals a similar trend to that of single family homes. However, the median price of manufactured homes with the same number of bedrooms is lower, reflecting the general market perception of manufactured homes as a more affordable housing option.</p>
                     <img src="./../images/LivingareaManufactured.png" alt="Manufactured homes LivingArea graph">
-                    <p>Here is graph for Living area. As we can see, prices increase as living area increases. </p>
+                    <p>Here is a plot for living area. As we can see, prices increase as living area increases, but it seems that this has a slightly more 
+                        pronounced effect on manufactured houses compared to single family houses. Once again, this will be reiterated on the next page. </p>
                 </div>
             </div>
             
             
             <div class="row">
                 <div class="col">
-                    <h2>Summary</h2>
-                    <p>Through our analysis, we have uncovered insightful trends in how the number of bedrooms and bathrooms, 
-                        as well as living area, affect home prices. These trends vary between single-family and 
-                        manufactured homes, providing valuable insights for potential homeowners and investors. Next, we do a deeper
-                        dive into the correlation among the features, price, and zestimate. </p>
-                    <a href="NextPageLink.html" class="next-page">Next: [Next Page Name]</a>
+                    <h2>What I Learned</h2>
+                    <p>By far the coolest tidbit I learned through this analysis is how house prices seem to plateu a little after four bedrooms, which means 
+                        that the price increase per bedroom on average is higher for houses with less than four bedrooms. This means that, if you want to get a house 
+                        with four bedrooms, then all else being equal, you might want to look into getting a house with more bedrooms since it won't cost much more, on average. 
+                        This is a great example of how data science can be used to make better decisions in real life. </p>
+                        
+                        <p> However, this analysis is lacking something extremely important - correlation between features! Check out the next page to 
+                            see some of that. 
+                        </p>
+                    <a href="https://bbonifacio-at-mudd.github.io/Yillow/price/correlation.html" class="next-page">Next Page: Correlation Analysis</a>
                 </div>
             </div>
         </div>
