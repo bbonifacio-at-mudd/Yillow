@@ -6411,7 +6411,7 @@
                 margin-top: 5px;
             }
             body {
-                font-family: Arial, sans-serif;
+                font-family: "Times New Roman", serif;
                 margin: 0;
                 padding: 0;
                 background-color: #f4f4f4;
@@ -6465,50 +6465,89 @@
             <div class="row">
                 <div class="col">
                     <h1>Feature Engineering Process</h1>
-                    <p>Feature engineering is the process of using domain knowledge to create new features that make machine learning algorithms work better. In the Yillow Project, we used several techniques to create informative features from our dataset. Here's a summary of our approach.</p>
+                    <p>Feature engineering is the process of creating and modifying our current features to create new features that make machine learning 
+                        algorithms work better. This is because it extracts more information for the machine learnign algorithm, it increases the dimensionality of the dataset, 
+                        and also because it can transform our current 
+                        features into forms that work better for machine learning. </p>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
-                    <h2>Parsing Parking Spaces</h2>
-                    <p>One of the first steps we took was to parse the parking value string. For example, if a record indicated '2 Carport Spots', we extracted the '2' and used this as the numerical value for the 'parking spaces' feature.</p>
+                    <h2>String Parsing</h2>
+                    <p>The first step I took was to parse the string features. For example, if the parking feature indicated '2 Carport Spots',
+                         I extracted the '2' and used this as the numerical value for the 'parking spaces' feature. This way, instead of each parking value 
+                         feature being unique, I could use an extra feature to represent how many parking spots there were. I did this string extraction technique 
+                         for a lot of features: some heating method strings had multiple methods, so I added two more features to represent each way that the house 
+                         was heated. I also extracted tons of features from the address string, such as the unit number, street type (like 'Way' or 'Drive'),
+                         street direction (e.g., 'NE' or 'W'), and the name of the street. I also looked for special keywords like 'Lake', 'Riverside', or 'Canyon', and
+                         included a boolean feature indicating if the address has a hyphen. I also used string parsing to identify the type of property (such as 'unit' or 'trailer').
+                         After this, I had thirty total features for each house, which I was fairly happy with. 
+                    </p>
+                </div>
+            </div> 
+            <div class ="row">
+                <div class ="col">
+                    <h2>Encoding and Overfitting Prevention</h2>
+                    <p>
+                        Unfortunately, machine learning algorithms can't take strings as input, so all categorical variables needed to be transformed into integer values. 
+                        After this, I used this cool trick called one-hot encoding via pd.dummies to create a new feature for each category of a categorical variable.
+                         In other words, each category of a qualitative 
+                        variable gets its own feature, marked as '1' if the category applies and '0' otherwise. 
+                        This way, the machine learning algorithm can process this data without implicitly assigning order or magnitude where there isn't any.
+                </p><p>
+                An interesting note with encoding is that, originally, I didn't encode the zip code because I thought it was a quantitative variable (after all, it's a number, right?).
+                However, when the machine learning model wasn't getting as good of results as I was expecting, I realized that zip code made the machine learning work 
+                significantly better as a categorical variable instead of a quantitative variable! This makes a lot of sense in hindsight because a zip code is just a 
+                unique identifier for a region, not a quantitative value where a bigger or smaller value indicates more or less value like the number of bedrooms does. 
+                </p>
+                <p> After encoding my features, I noticed something interesting: features that had a near 1:1 mapping to each house had a correlation that was super close to 1, even if 
+                    they don't give us any new information about the house! A prime example of this is the url, which was unique for each house. Features like this led to overfitting 
+                    in the machine learning process, so I had to remove them. 
+                </p>
                 </div>
             </div>
+
+
+
             <div class="row">
                 <div class="col">
-                    <h2>Splitting Heating Methods</h2>
-                    <p>Some properties featured multiple heating methods. In such cases, we split these up into separate features, allowing us to better capture the variety of heating options across all properties.</p>
+                    <h2>Price Transformation</h2>
+                    <p>Machine learning algorithms work best when all quantitative features and (in the case of regression) the prediction goal are normally distributed
+                        and not large. Although most of my features were fairly small and approximately normally distributed, the most important variable was not: price. 
+                        The price was not normally distributed and also had a very large range, so I had to transform it. However, thankfully I could kill two birds with one 
+                        stone by simply taking the log of the price, which both made the price more normal and also made the range of the price much smaller. Although I would need 
+                        to take the exponent of the prediction to get the actual price, this was a small price to pay for the benefits of this transformation. 
+                        </p>
                 </div>
             </div>
+
             <div class="row">
                 <div class="col">
-                    <h2>Address Character Extraction</h2>
-                    <p>We found key insights could be derived from the property's address. We extracted the unit number, street type (like 'Way' or 'Drive'), street direction (e.g., 'NE' or 'W'), and the name of the street. We also looked for special keywords like 'Lake', 'Riverside', or 'Canyon', and included a boolean feature indicating if the address has a hyphen.</p>
+                    <h2>Extracting Features From Images</h2>
+                    <p> A technique I played with was using convolutional neural networks to extract house features from pictures, such as how many stories the house was. 
+                        However, my journey with this technique can't be fit into this page, so there's a whole subpage devoted to it. </p>
+                    <a href="https://bbonifacio-at-mudd.github.io/Yillow/data/convnet.html" class="next-page">Side Page: House Pictures</a>
                 </div>
             </div>
+
+
             <div class="row">
                 <div class="col">
-                    <h2>Property Type Identification</h2>
-                    <p>We used string parsing to identify the type of property (such as 'unit' or 'trailer'), adding another dimension to our dataset and potentially capturing important price influences.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <h2>Price Normalization</h2>
-                    <p>In order to mitigate the influence of extreme values or outliers, we normalized the price variable. This ensures that the range of this variable doesn't disproportionately affect our machine learning models.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <h2>Transforming Qualitative Variables</h2>
-                    <p>For qualitative variables, we transformed them into a format suitable for machine learning. One common approach is one-hot encoding, where each category of a qualitative variable gets its own feature, marked as '1' if the category applies and '0' otherwise. This way, the machine learning algorithm can process this data without implicitly assigning order or magnitude where there isn't any.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <h2>Summary</h2>
-                    <p>With these feature engineering techniques, we were able to prepare our dataset to better fit into our machine learning models. By crafting these new features, we could capture more nuances in the data, potentially improving the performance of our predictive models.</p>
-                    <a href="NextPageLink.html" class="next-page">Next: [Next Page Name]</a>
+                    <h2>What I Learned</h2>
+                    <p> Although I have done much feature engineering in the past, there's always new things to learn. In this case, I learned that considering whether 
+                        each variable is cateogorical or quantitative is not as simple as "what's a string?" or "what's a number?". For example, as we'll see on the data analysis
+                        section, the zip code is one of the most important features for determining price, so I sure am glad I figured out it was a categorical variable!
+                        </p> <p>
+                        However, looking back on this section, I think that I could have done a lot more to make features. For example, I could have used the latitude and longitude values
+                        to extract a lot of information about the location of the houses, such as the elevation, the distance to the nearest body of water, proximity to railroads, 
+                        or the distance from the nearest major 
+                        city like Seattle. 
+                    </p>
+
+                    <p>With these feature engineering techniques, I was able to prepare my dataset to better fit into the Yestimate.
+                         By crafting these new features, I could capture more nuances in the data, potentially improving the performance of the Yestimate.
+                        Let's hope it was enough! Check out the next page to see if it was...</p>
+                    <a href="https://bbonifacio-at-mudd.github.io/Yillow/ml/ensembling.html" class="next-page">Next Page: Yestimate Construction</a>
                 </div>
             </div>
         </div>
