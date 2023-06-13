@@ -6411,7 +6411,7 @@
                     margin-top: 5px;
                 }
             body {
-                font-family: Arial, sans-serif;
+                font-family: 'Times New Roman', serif; 
                 margin: 0;
                 padding: 0;
                 background-color: #f4f4f4;
@@ -6466,28 +6466,25 @@
                 <div class="col">
                     <h1>Data Acquisition</h1>
                     <p>For any data science project, acquiring the right dataset forms the crux of the journey.
-                         In the case of 'Yillow: A Parody of Zillow', our desired dataset needed to be comprehensive,
-                          varied, and representative of the current housing market.</p>
-                    
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <h2>Data Sources</h2>
-                    <p>ATo continue the theme of being a parody of Zillow, the inspiration behind this project, the data was responsibly
-                        gathered from Zillow's own website. This was performed via respectful web scraping, 
-                        with deliberate multisecond delays between web requests to ensure no undue burden on the Zillow website. 
-                        The process was carried out through original code in Python and was designed to minimize disruption while still
-                         gathering the data necessary for the project.</p>
+                         For Yillow, my desired dataset needed to be comprehensive,
+                          varied, and representative of the current housing market. To continue the theme of being a parody of Zillow,
+                           the inspiration behind this project, the data was responsibly
+                            gathered from Zillow's own website. This was performed via respectful web scraping, 
+                            with deliberate multisecond delays between web requests to ensure no undue burden on the Zillow website. 
+                            The process was carried out through original code in Python and was designed to minimize disruption while still
+                            gathering the data necessary for the project. As a final note, I chose to only scrape houses in Washington because Washington is 
+                            on my radar as a place to live one day. Furthermore, I knew that my dataset wouldn't be gigantic, so predicting housing prices 
+                            for all states would be a difficult given the size of my dataset. </p>
                 </div>
             </div>
             <div class="row h-1000">
                 <div class="col-sm-6 d-flex flex-column">
-                    <h2>Single-Family Houses</h2>
-                    <p>The first dataset is a robust collection of sold single-family houses in Washington, consisting of approximately
-                        2,000 homes. To achieve a varied and representative sample, the data was broken down by the number of bedrooms 
-                        - from one up to five bedrooms. For each category, data from 20 pages was collected, ensuring a well-rounded 
-                        dataset that covered a range of home sizes.</p>
+                    <h2>Single Family Houses</h2>
+                    <p>The first dataset is a robust collection of single family houses in Washington sold recently, consisting of approximately
+                        2,500 homes. To achieve a varied and representative sample, the data was broken down by the number of bedrooms 
+                        - from one up to five bedrooms. For each category, data from Zillow's 20 pages was collected, ensuring a well-rounded 
+                        dataset that covered a range of home sizes. I wanted to scrape single family homes because I might live in one someday, 
+                        and I wanted to learn more about the price trends for these houses. </p>
                 </div>
                 <div class="col-sm-6 d-flex flex-column">
                     <img src="./../images/Single-Family.png" alt="Single Family Home">
@@ -6499,41 +6496,49 @@
             <div class="row h-100">
                 <div class="col-sm-6 d-flex flex-column h-1000">
                     <h2>Manufactured Homes</h2>
-                    <p>The second dataset mirrors the first but focuses on manufactured homes instead. This dataset was acquired in a
-                        similar fashion, offering an interesting contrast to the single-family home data.</p>
+                    <p>The second dataset mirrors the first but focuses on manufactured homes instead. This dataset was acquired in the same fashion as the 
+                        single family home dataset, and I think it will be really interesting to compare and contrast housing trends for these two types of 
+                        houses. Furthermore, with the advent of 3D printed houses as well as the increasing popularity of tiny homes, I think it's very possible
+                        I will live in a manufactured home one day, so I wanted to also learn more about the price trends for these houses. 
+                    </p>
                 </div>
                 <div class="col-sm-6 d-flex flex-column">
                     <img src="./../images/Manufactured.png" alt="Manufactured Home">
-                    <figcaption>Manufactured homes, as shown in the accompanying picture, are factory-built homes often known for their 
-                        affordability and flexibility. Despite being constructed off-site, they can be just as spacious and comfortable 
-                        as traditional homes, equipped with all essential living facilities.</figcaption>
+                    <figcaption>Manufactured homes, as shown in the picture above, are factory-built homes often known for their 
+                        affordability and flexibility. Despite being constructed off-site or by 3D printers,
+                         they can be just as spacious and comfortable 
+                        as single family homes, equipped with all essential living facilities. A super cool subset of manufactured homes is 3D printed homes,
+                        which I think have the potential to help with a lot of housing problems in the housing market. </figcaption>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col">
-                    <h2>Additional Data Collection</h2>
-                    <p>To further enrich our dataset and analysis, we went the extra mile by visiting the individual webpage for each house listed.
-                         This allowed us to gather six more features about each property. These features are more information for the type of house
-                        such as "manufactured on land" or "mobile manufactured," the year the house was built, the heating and air conditioning status 
-                        of the house, the parking status of the house, and the offer review date. </p>
+                    <h2>Results</h2>
+                    <p>The thirteen primary features extracted for all ~5,000 houses were price, zestimate, zipcode, bathrooms, bedrooms, living area, address, city, state, home type, longitude,
+                         latitude, and url.
+                        During the webscraping process, I made sure to only collect houses for which all thirteen of these features were present so that I could have a complete dataset
+                        for the most important features. To further enrich our dataset and analysis, I went the extra mile by visiting the individual webpage for each house listed, which took a 
+                        very long time because I made sure to delay my web requests by multiple seconds to be respectful of Zillow's website. 
+                         This allowed me to gather six more secondary features about each property, such as the year the house was built, the heating and air conditioning status 
+                        of the house, the parking status of the house, the offer review date, and more information on the type of house. As a note, sometimes houses would be missing secondary 
+                        features, so I'll definitely need to do some data cleaning after this.
+                        Below is a picture of some of my data </p>
+                        <img src="./../images/Acquisition2.png" alt="Data Gathering Process">
+                        
                 </div>
             </div>
             
             <div class="row">
                 <div class="col">
-                    <h2>Summary</h2>
-                    <p>These two datasets, meticulously and respectfully collected, provided the raw materials for this project.
-                        They offered a solid foundation for in-depth data analysis and robust model development, enabling me to
-                         uncover intriguing insights about the housing market, develop 'Yestimate', and ultimately embark on the hunt for my dream home.
-
-                       With our data now acquired, let's dive into the Data Science subpage to explore the next steps in the journey - data cleaning, preprocessing, and feature engineering.</p>
-                    <img src="./../images/Acquisition.png" alt="Data Gathering Process">
-                    <figcaption>All ~2000 single-family and ~2000 manufactured homes were put in a csv with their price, 
-                         zestimate, zipcode, bathrooms, bedrooms, living area, address, city, state, home type, longitude, latutude, url, and the six extra features 
-                         from the individual webpage for each house. 
-                    </figcaption>
-                    <a href="https://bbonifacio-at-mudd.github.io/Yillow/data/cleaning.html" class="next-page">Next: Data Cleaning Subpage</a>
+                    <h2>What I Learned</h2>
+                    <p> I've never webscraped before, and it was both really fun to learn but also took a lot of time. I learned how to use the BeautifulSoup library in Python,
+                        which is a really powerful tool for webscraping. This part of Yillow took a really long time, but I wanted to make sure I got it right because the entire 
+                        project relies on the quality of the data I could collect. In hindsight, I probably could have collected a lot more features about each house, such as the 
+                        price of the nearest neighbor, the Walkability score, and more. If I were to ever go through a data collection process such as this in the future, I'd be sure
+                        to squeeze as much data as possible from my data source because it makes a big difference in the end even if I might just want to jump to the next steps. 
+                        </p>
+                    <a href="https://bbonifacio-at-mudd.github.io/Yillow/data/cleaning.html" class="next-page">Next Page: Data Cleaning</a>
                 </div>
             </div>
         </div>
