@@ -6411,7 +6411,7 @@
                 margin-top: 5px;
             }
             body {
-                font-family: Arial, sans-serif;
+                font-family: "Times New Roman", serif;
                 margin: 0;
                 padding: 0;
                 background-color: #f4f4f4;
@@ -6465,63 +6465,74 @@
             <div class="row">
                 <div class="col">
                     <h1>Machine Learning Model Construction</h1>
-                    <p>In the endeavor to predict house prices within the Yillow project, we embarked on a strategic voyage into the realm of machine learning. Employing a selection of diverse models, we fine-tuned their settings through hyperparameter tuning and invoked the power of ensembling. This page illuminates our diligent approach and the systematic methodology we adopted.</p>
+                    <p>The first step in machine learning is to choose which models to use. Because this is a regression problem and also to ensure I covered 
+                        a broad range of models, I chose nine popular and openly accessible regression models: 'RandomForestRegressor', 'AdaBoostRegressor',
+                         'LGBMRegressor', 'XGBRegressor', 'Ridge', 'Lasso', 'ElasticNet', 'SVR', 
+                         and 'GradientBoostingRegressor'. This versatile squadron of models, with their distinctive learning strategies,
+                          offered an extensive palette of capabilities, each uniquely adept at capturing different dimensions and nuances
+                           of my dataset. These models seemed promising upon spot-checking, so I moved on to tuning them. </p>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
-                    <h2>The Chosen Nine - An Ensemble of Models</h2>
-                    <p>As a cornerstone of our approach, we carefully selected a nonet of robust machine learning models - 'RandomForestRegressor', 'AdaBoostRegressor', 'LGBMRegressor', 'XGBRegressor', 'Ridge', 'Lasso', 'ElasticNet', 'SVR', and 'GradientBoostingRegressor'. This versatile squadron of models, with their distinctive learning strategies, offered an extensive palette of capabilities, each uniquely adept at capturing different dimensions and nuances of our intricate dataset.</p>
+                    <h2>Hyperparameter Tuning via Optuna</h2>
+                    <p>Hyperparameter tuning is an extremely important process of the machine model pipeline because each dataset has a different, unique
+                        set of best model parameters that are near-impossible to determine without experimental testing. In the past, I've used a variety of techniques 
+                        to tune hyperparameters, from tuning them manually, to using RandomSearchCV, to (my personal favorite) using a genetic algorithm. However, I 
+                        decided to use a new tool for this project that I've never used before: Optuna. Optuna is an open-source hyperparameter optimization framework
+                        that uses a ton of different techniques to find the best hyperparameters for a given model based on a given objective function, which I chose to be 
+                        a simple Kfold cross-validation on the tuned model. Not only that, but Optuna has a setting that allows for multi-threading, which made the search
+                        process much, much faster! I tried tuning some of the models myself to see if I could beat Optuna, and I just couldn't! I'll be sure to make much 
+                        use out of Optuna or tuning packages like it in the future if I ever need to train a ton of ML models!</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
-                    <h2>Optuna - The Art of Hyperparameter Tuning</h2>
-                    <p>Recognizing the importance of fine-tuning our models, we adopted Optuna, an optimization framework, to execute the meticulous task of hyperparameter tuning. We explored a broad range of possible values for each hyperparameter of our chosen models, running an exhaustive search to discover the optimal set that would minimize the error in predictions. This ensured that our models were well-calibrated to best represent the given data and generate precise predictions.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <h2>Ensembling - A Symphony of Models</h2>
-                    <p>Riding on the wings of our top-performing models, we turned to the potent technique of ensembling to elevate our prediction accuracy. By combining the predictions of various models, we effectively harnessed their individual strengths while offsetting their individual weaknesses. Our ensemble was primarily a blend of stacked generalization and voting techniques, producing a more robust model that was resistant to overfitting and capable of handling a variety of data patterns.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <h2>Figures</h2>
-                    <p>Demonstrating the fruits of our labor, the figures below provide a visual comparison of actual vs. predicted house prices, illustrating the efficacy of our ensembled model in approximating real-world values.</p>
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <img src="./../images/RMSLE_Manufactured.png" alt="RMSLE Manufactued">
-                            <figcaption>This is a plot of how our models perform via the root-mean-squared-logarithmic-error (RMSLE) metric, with 
-                                the Zestimate's predictions for the data shown as a dashed line.</figcaption>
+                    <h2>Ensembling to Get the Yestimate</h2>
+                    <p>After the models had been tuned, I ensembled the four best performing ones to form a stacked model that was... the Yestimate! 
+                        By ensembling models together, I was able to take advantage of the strengths of each model while offsetting their weaknesses.
+                        In this way, I was able to create a model that was more robust and resistant to overfitting than any of the individual models.
+                        The performance of the nine individual models as well as the stacked Yestimate is given below with a comparison to the Zestimate baseline. 
+                        After much tuning and playing with the models, I'm happy to say that the Yestimate's test mean absolute error is only 2.1x that of the real Zestimate. 
+                        Although this may sound impressive, there's a lot of nuances to this result that will be discussed on the next page. </p>
+                        <div class ="row">
+                            <div class="col-sm-6">
+                                <img src="./../images/RMSLE_Manufactured.png" alt="RMSLE Manufactued">
+                                <figcaption>This is a plot of how our models perform via the root-mean-squared-logarithmic-error (RMSLE) metric, with 
+                                    the Zestimate's predictions for the data shown as a dashed line.</figcaption>
+                            </div>
+                            <div class="col-sm-6">
+                                <img src="./../images/MAE_Manufactured.png" alt="MAE Manufactured">
+                                <figcaption>This is a plot of how our models perform via the mean absolute error (MAE) metric, with 
+                                    the Zestimate's predictions for the data shown as a dashed line.</figcaption>
+                            </div>
                         </div>
-                        <div class="col-sm-6">
-                            <img src="./../images/MAE_Manufactured.png" alt="MAE Manufactured">
-                            <figcaption>This is a plot of how our models perform via the mean absolute error (MAE) metric, with 
-                                the Zestimate's predictions for the data shown as a dashed line.</figcaption>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <h2>Summary</h2>
-                    <p>Through a judicious selection of diverse models, meticulous hyperparameter tuning, 
-                        and the strategic application of ensembling techniques, we have constructed a model 
-                        that predicts house prices with a high degree of accuracy. This, we believe, forms 
-                        a solid foundation for the Yillow project's goal of making real estate more accessible
-                         and transparent for all.
-                        
-                        Yestimate MAE: 64349
-                        Yestimate RMSLE: 0.4936
                     
-                        Zestimate MAE: 30490
-                        Zestimate RMSLE: 0.3238
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h2>What I Learned & Summary</h2>
+                    <p>Although I have some experience with training machine learning models, 
+                        I still learned a lot from this process. Most notably, I learned how to use Optuna, 
+                        which is a super useful tool that sped up this process considerably. I'll be sure to bring 
+                        Optuna with me into the future, and I'll also be on the lookout for new tools that come
+                        out like Optuna! 
+                        </p><p>
+                        Through a judicious selection of diverse models, meticulous hyperparameter tuning, 
+                        and the strategic application of ensembling techniques, we've finally done it: the 
+                        Yestimate is real! And, even if I do say so myself, I don't think it's half-bad! It's MAE is only 
+                        2.1 times that of the real Zestimate, which I consider to be a major accomplishment esepecially considering 
+                        the fact that the Zestimate is a world-class model that has been trained on millions of data points.
+                        <p> However, comparing the Yestimate to the Zestimate in this way is a bit misleading, and there's so many 
+                            nuances to this result that I just need to devote a whole page to it.
                         </p>
+                        <a href="https://bbonifacio-at-mudd.github.io/Yillow/ml/performance.html" class="next-page">Next Page: Performance Nuances</a>
+                        <br><br>
+                        <p>
+                            Exact Performance Statistics: Yestimate MAE: $64,349 | Yestimate RMSLE: 0.4936 | 
+                            Zestimate MAE: $30,490 | Zestimate RMSLE: 0.3238
                         </p>
-                    <!-- Replace 'NextPageLink.html' with the link to your next page -->
-                    <a href="NextPageLink.html" class="next-page">Next: [Next Page Title]</a>
                 </div>
             </div>
         </div>
