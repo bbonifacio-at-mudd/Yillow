@@ -6426,7 +6426,6 @@
                 display: flex;
                 flex-wrap: wrap;
                 margin: 20px 0;
-                align-items: center;
                 text-align: center;
                 padding: 10px;
             }
@@ -6467,10 +6466,8 @@
                 <div class="col">
                     <h1>Correlation Analysis</h1>
                     <p> The next step in our data analyses is to explore the correlations among price as well as the main seven features of our dataset: 
-                        longitude, latitude, living area, bedrooms, bathrooms, zipcode, and city. Furthermore, I think it would also be 
-                        interesting to see how the Zestimate is affected by these. Since the Zestimate is supposed to approximate a house's true value, I wonder how 
-                        a feature's correlation with price will differ from a feature's correlation with the Zestimate... </p>
-                    <p> For our purposes, the correlation metric we're going to use to gauge correlation is 
+                        longitude, latitude, living area, bedrooms, bathrooms, zipcode, and city. I'll also throw the Zestimate in there just for fun. 
+                        For our purposes, the correlation metric we're going to use to gauge correlation is 
                         the Spearman correlation coefficient. The reason we're using Spearman and not Pearson is because the Pearson coefficient makes certain assumptions
                         about the data, like it being normally distributed and having linear relationships, while the Spearman correlation doesn't.</p>
                 </div>
@@ -6479,30 +6476,35 @@
     
             <div class="row">
                 <div class="col-sm-6">
-                    <h3>Single-family Homes</h3>
+                    <h3>Single Family Homes</h3>
                     <img src="./../images/Single-Family-Spearman2.png" alt="Single-family spearman">
-                    <p>The Spearman plot for single-family homes indicates the rank-based correlation coefficient 
-                        between various features. This visual tool helps to reveal potential relationships between 
-                        pairs of features that might not be immediately apparent.</p> 
-                        <img src="./../images/Single-Family-Spearman-Zest2.png" alt="Single-family spearman">
-                        <p>The Spearman plot for single-family homes indicates the rank-based correlation coefficient 
-                            between various features. This visual tool helps to reveal potential relationships between 
-                            pairs of features that might not be immediately apparent.</p> 
+                    <p>This first plot represents the Spearman correlation coefficient between price and the primary seven features and the zestimate. 
+                        In this plot, we see some interesting trends - the price of single family homes depends the most on zip code, and it is also nice to 
+                        see that the Zestimate is almost completely correlated with the price. However, a strange pattern I wasn't expecting is how 
+                        the price of single family homes depends much more on the number of bathrooms rather than the number of bedrooms, which is the 
+                        opposite of what I thought would be the case. </p>
                     <img src="./../images/Single-Family-Heatmap2.png" alt="Single-family spearman">
-                    <p>The heatmap for single-family homes presents the correlation between the features in a color-coded matrix, with warmer colors indicating a stronger positive correlation and cooler colors indicating a stronger negative correlation.</p>
+                    <p>To me, the most interesting part of this heatmap is just how highly correlated the living area, bedrooms, and bathrooms are, and 
+                        this makes a lot of sense when we take into account the graphs we saw on the previous page. As a good sign, we also see a very high correlation 
+                        between the zip code and the city, which makes sense because cities are usually associated with specific zip codes. 
+                    </p>
                      
                 </div>
                 <div class="col-sm-6">
                     <h3>Manufactured Homes</h3>
                     <img src="./../images/Manufactured-Spearman2.png" alt="Single-family spearman">
-                    <p>The Spearman plot for manufactured homes gives us an insight into the relationships between
-                         different features. It's a powerful tool for identifying dependencies among features in the dataset. Dummy text here to make the columns the same size. </p>
-                    <img src="./../images/Manufactured-Spearman-Zest2.png" alt="Single-family spearman">
-                    <p>The Spearman plot for single-family homes indicates the rank-based correlation coefficient 
-                        between various features. This visual tool helps to reveal potential relationships between 
-                        pairs of features that might not be immediately apparent.</p> 
+                    <p>In contrast to the single family plot, many of the highest correlating features for single family homes, namely zip code and 
+                        living area, are not as highly correlated as they were with the single family homes. Furthermore, we also see that the Zestimate
+                        is slightly less correlated with the price, and zip code is no longer the highest correlating featuer. Instead, living area is just barely 
+                        more correlated with price than zip code. Furthermore, the biggest change is with longitude, which is now negatively correlated with price. 
+                        </p>
                     <img src="./../images/Manufactured-Heatmap2.png" alt="Single-family spearman">
-                    <p>The heatmap for manufactured homes showcases the correlations between different features, providing a visually intuitive representation of the data. The color intensity in the heatmap can help us discern the strength of the correlations.</p>
+                    <p>Looking at this heatmap, the biggest change from single family homes is how living area and bedrooms are less correlated with bathrooms
+                        than they were with single family homes despite the correlation between living area and bedrooms being the same. I always thought that
+                         manufactured homes were pre-planned and made en masse, so I would have been inclined to believe that the number of all home features 
+                         would be more correlated with each other. 
+                    
+                    </p>
                 </div>
             </div>
 
@@ -6510,12 +6512,16 @@
             
             <div class="row">
                 <div class="col">
-                    <h2>Summary</h2>
-                    <p>With the help of correlation analysis, we've illuminated the complex relationships
-                        between the features of our housing data. This understanding aids us in creating more accurate
-                        and robust predictive models, improving the insights we can draw from our dataset. It's just 
-                        another way the Yillow Project is harnessing the power of data to explore the housing market.</p>
-                    <a href="NextPageLink.html" class="next-page">Next: [Next Page Name]</a>
+                    <h2>Final Note</h2>
+
+                    <p> Correlation analysis is a super useful tool for understanding the relationships between features in a dataset, and 
+                        I think that the most interesting part of this page was how bathrooms have a bigger correlation with price than bedrooms do for single 
+                        family homes - 
+                        who woulda thought! I also think that the differences between the single family and manufactured homes are very interesting,
+                        especially how the Zestimate seems less correlated with the price of manufactured homes than it does with single family homes. This could indicate
+                        how the Zestimate is slighlty less accurate for manufactured homes than it is for single family homes. </p>
+
+                    <a href="NextPageLink.html" class="next-page">Next Page: Geography</a>
                 </div>
             </div>
         </div>
