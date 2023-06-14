@@ -6464,34 +6464,97 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h1>Performance Analysis: Model Performance</h1>
-                    <p>In the process of building and refining a predictive model, it's important to critically evaluate its performance in comparison to established benchmarks. In our case, we compared our Yillow model to Zillow's Zestimate, a widely-recognized and high-performing home value estimation model. Through this lens, we not only identify areas for improvement, but also appreciate the significant achievements of our model, particularly given its modest origins.</p>
+                    <h1>Performance Nuances: Owning It</h1>
+                        <p> "Owning It" is one of the most important values at Zillow, and to keep true to the parody-style of Yillow, 
+                            this is the page where I "Own It" and tell you just how bad the Yestimate really is. 
+                            There's so many nuances to the performance of our model 
+                            compared to the Zestimate that I just had to make a whole 
+                            subpage devoted to them. I'll be going over how the Zestimate and the Yestimate really aren't even predicting the same thing, 
+                            the differences in the span of each model, and so much more! 
+                        </p>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
-                    <h2>Understanding the Limitations</h2>
-                    <p>Our model demonstrates an impressive capability, yet it's crucial to recognize its limitations. Predominantly, our model is tailored to work with a specific dataset - houses in Washington, and more specifically, Manufactured and Single-Family homes. Moreover, it was trained on a carefully curated subset of the data, where outliers and anomalies were meticulously filtered out. Consequently, it lacks the broad adaptability inherent in more extensive models like Zestimate, which is designed to handle a wider range of housing types, locations, and data irregularities.</p>
+                    <h2>The Zestimate is so, so, so much better than the Yestimate</h2>
+                    <p> The first and most important point is that the Zestimate is not trying to just predict the price that a house was sold at. 
+                        Taken straight from Zillow, "the Zestimate is Zillow's best estimate of this home's market value," which is oftentimes
+                        very different than the price that a house was sold at! In contrast, my model assumes that the price that a house was sold at <em> is 
+                        the market value of the house.</em> So, we should actually think of the Zestimate's deviation from the actual price as the average 
+                        difference between the market value of a house and the price that it was sold at. This is a super important distinction, because this means that 
+                        the $30k that the Zestimate deviates from the price of a house isn't the Zestimate's error but rather the Bayes error, or minimum possible error that 
+                        a house's price can be predicted, for any model predicting house prices (assuming the Zestimate is perfect, which to be honest 
+                        it probably is pretty darn close to being perfect). 
+                        </p>
+                        <p>
+                            Even with this in mind, this still doesn't take into account how my model is predicting a very, very small proportion of all houses out there. 
+                            To be specific, the Yestimate is only trained and evaluated against Single Family and Manufactures homes in Washington, sold about within a year ago,
+                            that have information regarding the main features discussed on the Acquisition page,
+                             and only when the sold price is not an outlier. Change any of those factors, and the Yestimate is not much better than np.random. On the other hand, 
+                             the Zestimate has to be trained on every single house in its dataset, so the fact that the Zestimate can beat the Yestimate at its own game on this 
+                             tiny subset of houses is remarkable. 
+                        </p>
+
+                        <p>
+                            There's probably so many other reasons why the Yestimate has an unfair advantage over the Zestimate, but these were just the most prominent ones that 
+                            came to mind.
+
+                        </p>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
-                    <h2>A Silver Lining: The Achievements</h2>
-                    <p>Despite these limitations, the accomplishments of the Yillow model are remarkable. Our model operates with a comparably smaller dataset, processing information from around 2000 houses each for manufactured and single-family homes, and relies on only 26 features to predict the price. The fact that it delivers meaningful predictions, with a Mean Absolute Error that is approximately 2.1 times that of Zestimate, speaks volumes about the efficacy of our machine learning strategies and feature engineering techniques. It illustrates how a small but well-tuned model can achieve impressive results.</p>
+                    <h2>But.... the Yestimate is still Pretty Good</h2>
+                    <p>
+                        Now that we've talked about all the ways the Yestimate has an unfair advantage over the Zestimate, let's talk about all the ways the Zestimate 
+                        has an unfair advantage over the Yestimate. First and foremost, Zillow has <em> over 100 million houses </em>in its dataset, which puts my 5,000
+                        to shame. Not only this, but Zillow probably has thousands of features about each house in its database, and Zillow probably takes into account 
+                        tons of opinions from real estate companies and has an army of home evaluation experts. Not only that, but Zillow has some of the best 
+                        data scientists and machine learning engineers in the world that have been working on improving the Zestimate since 2006. 
+                    </p>
+                    <p>
+                        Yillow, on the other hand, has a single overworked college student working on a $500 laptop living off a diet of ramen and coffee whose emotional support 
+                        comes from a hamster named Ghiarrhei and who gave himself a deadline of three weeks for this project to make sure that I have enough time to pass 
+                        my classes, graduate with the prophesized quad-major, and get a job after graduation. 
+
+                    </p>
+                    <p>You know, I could excuse all of that - even the part about the hamster - if it weren't for one detail. I think the most unfair part of all of this is that I'm using Zillow's own dataset,
+                         which means that I'm evaluating how my model
+                        performs on a testing dataset its never seen before while the Zestimate is evaluated on its <em> training dataset</em>. If you just got shivers, so did I. 
+                        Comparing how one model performs on a testing dataset with how another model performs on a training dataset is Machine Learning Blasphemy! I could excuse everything else, 
+                        but comparing testing and training performances crosses the line!
+                        </p>
+                        <p> 
+                            All jokes aside, the Zestimate and the Yestimate are obviously incomparable. However, I still think that the Yestimate's ability to get a mean absolute error 
+                            between the result of the model and the sold price 2.1 
+                            times that of the real Zestimate is pretty good when you take into account all the factors that go into both models. It shows that the Yestimate has an idea of
+                            what's going on in the housing market about twice as bad compared to the real Zestimate on the data it was trained on. This indicates that the data science and machine 
+                            learning techniques I used worked, and that's a result I'm more than happy with. 
+
+                        </p>
+
+
+                    </p>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
-                    <h2>Future Directions & Learnings</h2>
-                    <p>As we move forward, we are equipped with a treasure trove of insights from the Yillow project. The limitations identified provide clear pathways for future enhancements, such as expanding the model's applicability to a broader range of houses and locations, and improving its resilience to outliers and data anomalies. One possible approach could be to employ more robust outlier detection and handling methods, or to broaden the feature set by tapping into additional data sources. Another avenue for exploration could be the integration of more sophisticated machine learning models or ensemble techniques.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <h2>Summary</h2>
-                    <p>Overall, the Yillow project has been a profound learning journey, providing invaluable exposure to the practical challenges and rewards of constructing a machine learning model. It demonstrates that, even when working within constraints, we can build a model that performs admirably when compared with industry leaders. While there is always room for improvement, the achievements of this project serve as a testament to the power of methodical data analysis, creative feature engineering, and the strategic application of machine learning.</p>
-                    <!-- Replace 'NextPageLink.html' with the link to your next page -->
-                    <a href="NextPageLink.html" class="next-page">Next: [Next Page Title]</a>
+                    <h2>Summary & Moving Forward</h2>
+                    <p> 
+                        If I had to summarize all the nuances of the Yestimate's performance compared to the Zestimate, 
+                        it would be this: the models are essentially incomparable, but since there's nothing else to compare the Yestimate to, 
+                        we'll say that it's about twice as bad as the Zestimate on a very, very small subset of houses. This definitely isn't as 
+                        flashy as saying "I made a model that predicts house prices only twice as bad as Zillow!", but it's the truth. And in the spirit of 
+                        being a parody of Zillow, we also need to abide by their values, most notable "Owning It." So, I'll own up to it: the Yestimate is an awful predictor 
+                        of house prices in general, but it's pretty good considering the resources it had. In other words, the fact that it can predict house prices about 2.1 times as bad as 
+                        the Zestimate for the data it was trained on shows that the data science and machine learning techniques used worked, and in my opinion, that's what matters. 
+                    </p>
+                    <p>The "next" section of my website talks about data trends, but after this point most of the pages are independent of each other, so feel free to go 
+                        wherever. 
+                    </p>
+                         <a href="https://bbonifacio-at-mudd.github.io/Yillow/price/trends.html" class="next-page">Next Page: Price Trends</a> <br><br>
+                         <p> Or, if you want, you can jump straight to my interactive maps to see for yourself how the Yestimate predicts house prices. Or go to any page, 
+                            after this point you have a full understanding of how I got my data and arrived at the Yestimate, so feel free to explore!
                 </div>
             </div>
         </div>
