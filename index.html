@@ -6879,6 +6879,12 @@
                 margin-bottom: 15px;
             }
             img {
+                height: 100%;
+                width: auto;
+                object-fit: cover;
+            }
+
+            .img-main {
                 max-width: 100%;
                 height: auto;
                 max-height: 250px;
@@ -6903,7 +6909,7 @@
                         "Yillow: A Parody of Zillow." In this comprehensive project, there's a lot of things to explore: data science, machine learning model construction, 
                         market trends analysis, interactive maps, and a real-world application of our model, the "Yestimate," in finding under-valued gems on the 
                         housing market. There's lots to explore, so scroll down to see more information about which section you should start at! </p>
-                        <img src="./images/tons_of_content2.png" alt="Yillow Journey">
+                        <img class="img-main" src="./images/tons_of_content2.png" alt="Yillow Journey">
                     <figcaption>Yillow has tons of content that'll captivate anyone interested in buying houses, data science, machine learning, 
                                 or just looking at pretty pictures of houses!
                     </figcaption>
@@ -6921,7 +6927,8 @@
                           I was compelled to craft a project that would not only showcase my skills but also provide
                            a meaningful platform for learning and exploration. The thought of building a predictive
                             model for housing prices, inspired by Zillow, struck me as the perfect blend of a 
-                            formidable technical challenge and a practical, real-world application.</p>
+                            formidable technical challenge and a practical, real-world application. So, I decided to create a project in 
+                        parody-style of the real Zillow, which is why the sites look so similar!</p>
                 </div>
             </div>
 
@@ -6929,232 +6936,103 @@
                 <div class="col">
                     <h2>Where to Start? </h2>
                     <p>Here's a brief overview of each section, feel free to check out whichever one seems most interesting to you!</p>
-                    <ul>
-                        <li><strong>Data Science & Acquisition:</strong> Learn about the process of gathering and cleaning our dataset from various housing websites. We meticulously prepare our data, engineer features to enrich our model, and even explore using Convolutional Neural Networks to analyze house images.</li>
-                        <li><strong>Price Trend Analysis:</strong> Get a deep understanding of price trends across different regions and over time. Discover key factors driving property values and their interconnected nature.</li>
-                        <li><strong>Machine Learning Model Creation:</strong> Witness the heart of our project, the 'Yestimate'. See how we create, fine-tune, and evaluate our models, including a unique exploration of Convolutional Neural Networks for image analysis.</li>
-                        <li><strong>Yestimate vs. Zestimate:</strong> How does our model stand up against Zillow's 'Zestimate'? Find out in our detailed comparison.</li>
-                        <li><strong>The Home Hunt:</strong> Embark on a thrilling journey as we use our model to find the perfect home, adding a practical and personal touch to our project.</li>
-                    </ul>
-                    <img src="./images/yillow-journey.jpg" alt="Yillow Journey">
-                    <figcaption>Our Journey</figcaption>
                 </div>
             </div>
-            <div class="row">
-                <div class="col">
-                    <h2>Let's Begin</h2>
-                    <p>We hope you're excited to explore this fascinating project. There's much to discover and learn, from intricate data science processes to real-world machine learning applications, market trends analysis, and an exciting house hunting journey. Get ready to step into the world of data, models, and the pursuit of the perfect home.</p>
-                    <a href="https://bbonifacio-at-mudd.github.io/Yillow/data/acquisition.html" class="next-page">Start Journey: Data Acquisition</a>
-                </div>
-            </div>
-        </div>
-        <hr style="margin: 0px 0;">
-        <div class="container" style="font-size: 1em; text-align: center;">
-            <p>Yillow was created by Brandon Bonifacio with the help of a variety of sources which are credited on our <a href="https://bbonifacio-at-mudd.github.io/Yillow/references.html" target="_blank">References page</a>.</p>
-            <p>Come check out my <a href="http://brandonbonifacio.com" target="_blank">personal website</a> or connect with me on <a href="https://www.linkedin.com/in/bonifaciob/" target="_blank">LinkedIn</a>!</p>
-            <p>Disclaimer: Yillow is an independent project, not affiliated with or endorsed by Zillow in any way. It is created for educational purposes and is not intended to infringe on any rights of Zillow.</p>
-            <p>No rights reserved - whatsoever.</p>
-        </div>
-        <img src="./images/Footer.png" alt="Footer Image" style="width:75%; height:auto; display:block; margin: auto;">
-    </body>
 
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Project Overview and Yillow vs. Zillow</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-        <style>
-            figcaption {
-                color: #666;
-                font-size: 0.8em;
-                text-align: center;
-                margin-top: 5px;
-            }
-            body {
-                font-family: Arial, sans-serif;
-                margin: 0;
-                padding: 0;
-                background-color: #f4f4f4;
-            }
-            .container {
-                width: 80%;
-                margin: 0 auto;
-                padding: 20px;
-            }
-            .row {
-                display: flex;
-                flex-wrap: wrap;
-                margin: 20px 0;
-                align-items: center;
-                text-align: center;
-                padding: 10px;  /* Add padding here */
-            }
-            .col, .col-6, .col-sm-6 {
-                padding: 20px;
-                background-color: #f9f9f9;
-                border-radius: 5px;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-            }
-            h1, h2 {
-                color: #333;
-                margin-bottom: 20px;
-            }
-            p {
-                line-height: 1.6;
-                color: #666;
-                margin-bottom: 15px;
-            }
-            img {
-                max-width: 100%;
-                height: auto;
-                max-height: 250px;
-                object-fit: cover;
-            }
-            a.next-page {
-                display: inline-block;
-                color: #fff;
-                background-color: #333;
-                padding: 10px 20px;
-                text-decoration: none;
-                border-radius: 5px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h1>Project Overview</h1>
-                    <p>Welcome to my journey into the world of Machine Learning and Data Science, as I unravel the complexities of the housing market in 
-                        'Yillow: A Parody of Zillow'. In this comprehensive project, I dive deep into a vast dataset, cleaning and preparing it meticulously,
-                         to unmask trends and weave patterns. At the heart of this endeavor is my Machine Learning model, the 'Yestimate', engineered to predict
-                          housing prices with precision. Alongside this, I push the boundaries of conventional price prediction methods, exploring the exciting 
-                          potential of Convolutional Neural Networks to gain insights from images of houses. </p>
-                    <img src="./images/temp.png" alt="Project Overview">
-                    <figcaption>Graphical representation of the project overview</figcaption>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <h2>Motivation</h2>
-                    <p>This project stemmed from my deep-seated interest in Machine Learning and AI, 
-                        combined with a fascination for the intricate dynamics of the real estate market.
-                         As a rising senior in college with sights set on becoming an ML/AI/Software Engineer,
-                          I was compelled to craft a project that would not only showcase my skills but also provide
-                           a meaningful platform for learning and exploration. The thought of building a predictive
-                            model for housing prices, inspired by Zillow, struck me as the perfect blend of a 
-                            formidable technical challenge and a practical, real-world application.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-6 d-flex flex-column">
-                    <h2>Scope</h2>
-                    <p>The expanse of this project covers the full spectrum of the data science lifecycle,
-                        from the initial stages of data acquisition and cleaning, and exploratory data analysis,
-                         to feature engineering, and finally, to the creation, fine-tuning, 
-                         and evaluation of Machine Learning models. Along this journey, I also delve into the study
-                          of housing market trends and go one step further by applying my model to a 
-                          real-world scenario - finding my dream home. However, I must highlight that while I have
-                           strived to develop a robust model, the primary purpose of this project is educational, 
-                           aimed at exploring data science and machine learning applications rather than rivaling 
-                           professional real estate valuation tools.</p>
-                </div>
-                <div class="col-sm-6 d-flex flex-column">
-                    <img src="./images/datascience.jpg" alt="Data Science Lifecycle">
-                    <figcaption>A representation of the Data Science Lifecycle</figcaption>
-                </div>
-            </div>
+            
             <div class="row">
                 <div class="col-sm-6 d-flex flex-column">
                     <h2>Data Science</h2>
-                    <p>Starting with gathering a robust dataset from various housing websites, I embarked on the critical
+                    <p>Starting with gathering a dataset of ~5,000 houses from Zillow, I embarked on the critical
                         stages of data cleaning and preprocessing. Afterwards, I developed feature engineering methods to 
                         increase the information my model would have to work with, and I also explored methods of using 
                         convolutional neural networks to analyze features from images of houses. </p>
+                        <a href="https://bbonifacio-at-mudd.github.io/Yillow/data/acquisition.html" class="next-page">Data Science</a>
                 </div>
                 <div class="col-sm-6 d-flex flex-column">
-                    <img src="./images/data.jpg" alt="Data Gathering">
-                    <figcaption>Depiction of the data gathering process</figcaption>
+                    <img src="./images/Acquisition2.png" alt="Data Gathering">
+                    <figcaption>For you data science fanatics out there, this section talks about how I made my dataset. </figcaption>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-6 d-flex flex-column">
                     <h2>Machine Learning</h2>
-                    <p>Machine learning lies at the heart of this project, driving the creation of 'Yestimate'. 
+                    <p>Machine learning lies at the heart of this project, driving the creation of the Yestimate. 
                         Here, we delve into the depths of various models, testing their ability to predict housing 
                         prices accurately. Several models are spot-checked, with the most promising ones selected 
-                        for further fine-tuning and optimization. An ensemble approach is also adopted to potentially enhance performance.
-
-                        In parallel with traditional machine learning models, I also explore the capabilities of
-                         Convolutional Neural Networks (ConvNets) in extracting valuable insights from house images.
-                          This exploration probes into an area less treaded in real estate price prediction and 
-                          offers an exciting potential direction for future research.</p>
+                        for further fine-tuning and optimization. An ensemble approach is also adopted to enhance performance.</p>
+                    <p>
+                        Along with constructing the Yestimate, this section also owns up to the many nuances as to the flaws associated with evaluating the 
+                        Yestimate against the Zestimate and just how good the Yestimate really is. </p>
+                        <a href="https://bbonifacio-at-mudd.github.io/Yillow/ml/ensembling.html" class="next-page">Machine Learning</a>
                 </div>
                 <div class="col-sm-6 d-flex flex-column">
-                    <img src="./images/machine_learning.png" alt="Machine Learning">
-                    <figcaption>Exploration of various machine learning models for housing price prediction</figcaption>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-6 d-flex flex-column">
-                    <h2>Data Analysis</h2>
-                    <p>In the Data Analysis portion of this project, we pull back the curtain to reveal the intricate
-                        patterns and trends hidden within our dataset. We delve into price trends, tracing the ebbs
-                         and flows of housing prices over time and across various regions, offering a nuanced
-                          understanding of the real estate market's dynamics. Simultaneously, we explore the 
-                          significance of different features in influencing house prices. By determining feature
-                           importance, we can identify the key drivers of property values. In addition, we 
-                           scrutinize the correlations between features, understanding their interconnected
-                            nature and how these relationships can impact the model's predictions. Lastly,
-                             we highlight the importance of geographical data. Recognizing that 'location, 
-                             location, location' often rings true in real estate, we examine the role of 
-                             geographical factors and their influence on house prices. This comprehensive 
-                             data analysis stage sets the stage for the subsequent modeling and prediction processes.</p>
-                </div>
-                <div class="col-sm-6 d-flex flex-column">
-                    <img src="./images/data-analysis-1.png" alt="Data Analysis">
-                    <figcaption>Analyzing patterns and trends within the dataset</figcaption>
+                    <img src="./images/MAE_Manufactured.png" alt="Machine Learning">
+                    <figcaption>Performance of Various Machine Learning Models vs. the Zestimate</figcaption>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-6 d-flex flex-column">
-                    <h2>Yestimate</h2>
-                    <p>A central piece of this project is 'Yestimate', my custom-built model for predicting housing prices. 
-                        As an educational exercise, I've made it a point to compare the performance of 'Yestimate' against
-                         its inspiration, Zillow's 'Zestimate'. This comparison is not designed to challenge or supersede 
-                         'Zestimate', but rather to understand the strengths and weaknesses of my model, and to identify 
-                         areas for further learning and improvement.</p>
+                    <h2>Price Analysis</h2>
+                    <p>In this section, I pull back the curtain to reveal the intricate
+                        patterns and trends hidden within my dataset. I delve into exactly how bedrooms, bathrooms, 
+                        and living area affect a house's price, and I also explore which features are most important 
+                        in determining a house's price. Recognizing that "location, 
+                             location, location" often rings true in real estate, I examine the role of 
+                             how geography incluences house price. </p>
+                             <a href="https://bbonifacio-at-mudd.github.io/Yillow/price/trends.html" class="next-page">Pricing Analysis</a>
                 </div>
                 <div class="col-sm-6 d-flex flex-column">
-                    <img src="./images/temp.png" alt="Yillow vs Zillow Graph">
-                    <figcaption>Yestimate vs Zestimate comparison</figcaption>
+                    <img src="./images/RegularPricevsBedrooms.png" alt="Data Analysis">
+                    <figcaption>Analyzing patterns and trends within the dataset is crucial to understanding how prices on houses are determined. </figcaption>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 d-flex flex-column">
+                    <h2>Yillow Maps</h2>
+                    <p>A central piece of this project is the Yestimate, and my custom-built interactive maps allow 
+                        you to explore the Yestimate in a fun, engaging way. This is intended to parody Zillow's own maps 
+                        feature, and you can zoom in, scroll around, and even click on the house dots to get more information
+                        about them! This is a must-do before you leave Yillow. </p>
+                        <a href="https://bbonifacio-at-mudd.github.io/Yillow/yestimate.html" class="next-page">Yillow Maps </a>
+                </div>
+                <div class="col-sm-6 d-flex flex-column">
+                    <img src="./images/Fam_Interactive_Map.png" alt="Yillow vs Zillow Graph">
+                    <figcaption>Yillow Maps allows you to explore houses in a similar way to how you can on Zillow's own website!</figcaption>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-6 d-flex flex-column">
                     <h2>Home Hunt</h2>
-                    <p>An exciting twist in this project is the 'Home Hunt'. I set out on a virtual quest to find my dream home 
+                    <p>An exciting twist in this project is the Home Hunt. I set out on a virtual quest to find my dream home 
                         using the Machine Learning model I developed, my personal preferences, and the expansive dataset at my disposal.
                          This not only serves as a practical demonstration of the model's capabilities but also adds a fun, personal 
-                         touch to the project. I invite you to follow me on this exciting journey as I hunt for the perfect home.</p>
+                         touch to the project. I invite you to follow me on this exciting journey as I hunt for the perfect home 
+                         and save hundreds of thousands of dollars!</p>
+                         <a href="https://bbonifacio-at-mudd.github.io/Yillow/hunt.html" class="next-page">Home Hunt</a>
                 </div>
                 <div class="col-sm-6 d-flex flex-column">
-                    <img src="./images/temp.png" alt="Dream Home Image">
-                    <figcaption>Representation of the Home Hunt</figcaption>
+                    <img src="./images/Manufactured_Dream_Home.png" alt="Dream Home Image">
+                    <figcaption>Find out how you can get a 5-bedroom, 5-bathroom, 5,000 square foot house for less than $500k!</figcaption>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
-                    <h2>Summary</h2>
-                    <p>As we reach the conclusion of the introduction, I hope you're as excited as I am to delve into this project. 
-                        From the intricacies of data science to the nuances of machine learning, from the analysis of From the 
-                        analysis of housing market trends to the hunt for my dream home, 'Yillow: A Parody of Zillow' promises
-                         to be an enriching journey full of insights and learning. While we explore these elements in more depth
-                          in the subsequent pages, my hope is that you will not only gain a deeper understanding of the data 
-                          science workflow but also appreciate the potential and the challenges of applying machine learning techniques to real-world problems. </p>
-                    <p>Please join me in this exploration as we step into the world of data, models, and a fascinating quest for the perfect home!</p>
-                    <a href="https://bbonifacio-at-mudd.github.io/Yillow/data/acquisition.html" class="next-page">Next: Data Acquisition</a>
+                    <h2>Owning It</h2>
+                    <p>In order to be a true parody-style project of Zillow, I also need to live up to Zillow's values, particularly
+                        owning up to what you've done.  
+                        This comes in two primary sections. First, I have a section where I explain the nuances behind saying how 
+                        the Yestimate has an error only about twice that of the real Zestimate. 
+                        This is below, so make sure to check this section out before you go: </p>
+                        <a href="https://bbonifacio-at-mudd.github.io/Yillow/ml/performance.html" class="next-page">Owning It</a><br><br>
+                        <p> The second section where I "Own It" is the summary of what I've done here, which if you're pressed for time, is a good way 
+                            to quickly see what I accomplished with this project, what I learned, and what I would do differently in the future: </p>
+                            <a href="https://bbonifacio-at-mudd.github.io/Yillow/conclusion.html" class="next-page">Summary</a><br><br>
+
+                        <p> As a note, these two pages are probably the most text-heavy pages on all of Yillow, but I think that's necessary in order to Own Up to what 
+                            I've done in this project. 
+                        </p>
+                        <p> I hope you enjoy your stay at Yillow! </p>
                 </div>
             </div>
         </div>
