@@ -2244,356 +2244,6 @@
         <link rel="preload" href="https://www.zillowstatic.com/s3/homepage/_next/static/chunks/commons.8abd837.js" as="script"/>
         <link rel="preload" href="https://www.zillowstatic.com/s3/homepage/_next/static/runtime/main-ea96991.js" as="script"/>
     </head>
-    <head>
-        <script>
-            if (typeof Object.assign === 'function') {
-                window.appInfo = Object.assign(typeof window.appInfo === 'object' ? window.appInfo : {}, {
-                    "@zillow/page-frame-content": "efe37e0e"
-                });
-            }
-        </script>
-        <script>
-            window.CLIENT_PROFILER_CONFIG = window.CLIENT_PROFILER_CONFIG || {
-                staticDimensions: {
-                    ABDecisionToken: "tah1VK_1678644235",
-                },
-            };
-        </script>
-        <script>
-            (function(i, s, o, g, r, a, m) {
-                i['GoogleAnalyticsObject'] = r;
-                i[r] = i[r] || function() {
-                    (i[r].q = i[r].q || []).push(arguments)
-                }
-                ,
-                i[r].l = 1 * new Date();
-                a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-                a.async = 1;
-                a.src = g;
-                m.parentNode.insertBefore(a, m)
-            }
-            )(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-        </script>
-        <script>
-            window.ga = window.ga || function() {
-                (ga.q = ga.q || []).push(arguments)
-            }
-            ;
-            ga.l = +new Date;
-            ga("create", "UA-21174015-56", "auto", {
-                allowLinker: true
-            });
-
-            /* Queue for Global UA Object */
-            (function(w, n) {
-                w[n] = w[n] || function() {
-                    (w[n].q = w[n].q || []).push(arguments)
-                }
-            }
-            )(window, 'ua');
-        </script>
-        <script>
-            !function() {
-                // Getting OptanonConsent cookie from document.cookie
-                var n = !1
-                  , op = document.cookie && document.cookie.split("; ").filter(function(n) {
-                    return n.indexOf("OptanonConsent=") === 0;
-                });
-                try {
-                    var o = op && op.length > 0 && op[0];
-                    if (void 0 !== o && null != o) {
-                        // Parse and read OptanonConsent cookie, look for groups.
-                        var i = decodeURIComponent(o).split("&").filter(function(n) {
-                            return n.indexOf("groups=") !== -1;
-                        });
-                        if (i.length > 0) {
-                            // Groups will look like 1:0,3:0,4:0. We want to check if the 3:0 exists, which is the code for functional blocking
-                            var m = i[0].substring(i[0].indexOf("=")).split(",");
-                            for (var k = 0; k < m.length; k++) {
-                                m[k].split(":").length > 1 && "3" === m[k].split(":")[0] && "0" === m[k].split(":")[1] && (n = !0)
-                            }
-                        }
-                    }
-                } catch (e) {}
-                ;window['ga-disable-' + 'UA-21174015-56'] = n;
-                window['disable-analytics'] = n;
-            }();
-
-            (function(w, d, ns, cdn, opt, ml, fa, my, fst) {
-                w['ZillowAnalyticsObject'] = ns;
-                w[ns] = w[ns] || [];
-                if (w[ns].initialize || w[ns].invoked)
-                    return;
-                w[ns].invoked = 1;
-                w[ns]._loadOptions = opt;
-                ml = ['identify', 'track', 'page', 'off', 'on', 'use', 'unuse', 'setdim', 'setprop', 'event', 'send', 'dwell', 'dwellEnd'];
-                fa = function(m) {
-                    return function() {
-                        w[ns].push([].concat(m, [].slice.call(arguments)));
-                        return w[ns]
-                    }
-                }
-                ;
-                ml.forEach(function(mn) {
-                    w[ns][mn] = fa(mn)
-                });
-                var x = !(window && window['disable-analytics']);
-                if (x) {
-                    my = d.createElement('script');
-                    fst = d.getElementsByTagName('script')[0];
-                    my.async = !0;
-                    my.src = cdn;
-                    if (fst)
-                        fst.parentNode.insertBefore(my, fst);
-                }
-                return w[ns];
-            }
-            )(window, document, 'zanalytics', 'https://e.zg-api.com/a/z/js/v1/analytics.js?v=bcf290c', {
-                'zillow': {
-                    apiKey: 'z_prod',
-                    apiHost: 'e.zg-api.com:443',
-                    secure: true,
-                    anonymousId: '5f615d8f-7f11-4346-9955-3cabb6a0b6a2',
-                }
-            });
-        </script>
-        <script>
-            window.__USER_SESSION_INITIAL_STATE__ = {
-                user: {
-                    loggedIn: true
-                }
-            };
-        </script>
-        <script>
-            var customDimension1 = '5f615d8f7f11434699553cabb6a0b6a2/X1-ZUtikzp4h8vqq1_4srxs';
-            ua('set', 'dimension1', customDimension1);
-            ga('set', 'dimension1', customDimension1);
-            ua('identify', 'X1-ZUtikzp4h8vqq1_4srxs');
-            ua('set', {
-                "dimension50": "AB_DASHBOARD_AA_TEST.ON",
-                "dimension64": "ADAT_APS_EMPTY_CLIENT_INFO.ADD_CLIENT",
-                "dimension59": "AIPERS_COLLECTIONS_UPDATES_TAB.APP_D",
-                "dimension177": "AIPERS_RT_RECS_COLLECTION_LISTING_SORT.MODEL_A_1",
-                "dimension184": "AIPERS_RT_RECS_HOMES_FOR_YOU_HDP.CONTROL",
-                "dimension187": "ANDROID_ILLUMINATE_JOURNEY_V0.CONTROL_OFF",
-                "dimension39": "ANDROID_NATIVE_CONTACT_FORM.CONTROL",
-                "dimension37": "ANDROID_PHOTO_CAROUSEL.CONTROL_PHOTO_CAROUSEL",
-                "dimension176": "ANDROID_SH_TOUR_CTA.CONTROL",
-                "dimension61": "ARCS_MWEB_NAME_FIELD.ON",
-                "dimension179": "AR_CSAT_ONSITE_HDP.CONTROL",
-                "dimension164": "CW_FINANCE_WITH_INLINE_WEB.THREE_VARIANT_DIRECT_CPA",
-                "dimension60": "CW_HIGH_INTENT_PHONE_DESKTOP.CONTACT_FORM_NATIONAL",
-                "dimension42": "DESKTOP_COMMUTE_FILTER_MVP.CONTROL",
-                "dimension41": "DXP_DYNAMIC_ADS.ON",
-                "dimension45": "DXP_MAP_ABC.CONTROL",
-                "dimension40": "HDP_INSIGHTS_VERSION.CONTROL",
-                "dimension36": "HDP_MEDIASOLUTIONS_ADS_WEB_FSBA.CONTROL",
-                "dimension57": "IOS_BDP_SAVE_V2.CONTROL_OFF",
-                "dimension46": "IOS_HDP_INSIGHTS_VERSION.VERSION_2",
-                "dimension168": "IOS_ILLUMINATE_JOURNEY_V0.CONTROL_OFF",
-                "dimension38": "IOS_MONTHLY_COST_FILTER_MVP.CONTROL_OFF",
-                "dimension181": "IOS_PHOTO_CAROUSEL.ON",
-                "dimension43": "IOS_SHARED_WITH_YOU.ON",
-                "dimension62": "LEGO_MANAGING_CONTACTED_RENTALS.ON",
-                "dimension65": "MTT_RTB_X_PLACEMENT_TEST.SELL_ZHL_RENT",
-                "dimension180": "ONSITE_MESSAGE_VALVE.OMP_ON",
-                "dimension172": "RE_CONFIRMATION_CAROUSEL.CONTROL",
-                "dimension48": "RE_HDP_HOME_INSIGHTS_VERSION.VERSION_2",
-                "dimension182": "RE_SECOND_BOOST.SLOT_4",
-                "dimension165": "RE_WEB_SRP_ZILLOWAPPLICATIONSBADGE.CONTROL",
-                "dimension63": "RE_Web_PersonalizedSort.Web_PersonalizedSort_Rent_T1",
-                "dimension173": "SP_BUILDING_PAGE.CONTROL",
-                "dimension175": "SP_COMMUNITY_PAGE.VIA_SHOPPER_PLATFORM",
-                "dimension186": "SP_FOR_RENT_PAGE.CONTROL",
-                "dimension178": "SP_FOR_SALE_PAGE.VIA_SHOPPER_PLATFORM",
-                "dimension183": "SP_NATIVE_PBHDP_PAGE.CONTROL",
-                "dimension58": "SP_PAID_BUILDER_PAGE.CONTROL",
-                "dimension171": "SXP_NO_SRPTOGGLE.CONTROL",
-                "dimension47": "SXP_Search_Refinement_Filters.FILTERS_ON",
-                "dimension166": "TAS_DIRECT_CONNECT_ELIGIBLE_ANDROID.ON",
-                "dimension167": "TAS_DIRECT_CONNECT_ELIGIBLE_IOS.ON",
-                "dimension169": "VL_POI.CONTROL",
-                "dimension188": "ZEXP_DECISION_TOKEN_HOLD.tah1VK_1678644235"
-            });
-            ga('set', {
-                "dimension50": "AB_DASHBOARD_AA_TEST.ON",
-                "dimension64": "ADAT_APS_EMPTY_CLIENT_INFO.ADD_CLIENT",
-                "dimension59": "AIPERS_COLLECTIONS_UPDATES_TAB.APP_D",
-                "dimension177": "AIPERS_RT_RECS_COLLECTION_LISTING_SORT.MODEL_A_1",
-                "dimension184": "AIPERS_RT_RECS_HOMES_FOR_YOU_HDP.CONTROL",
-                "dimension187": "ANDROID_ILLUMINATE_JOURNEY_V0.CONTROL_OFF",
-                "dimension39": "ANDROID_NATIVE_CONTACT_FORM.CONTROL",
-                "dimension37": "ANDROID_PHOTO_CAROUSEL.CONTROL_PHOTO_CAROUSEL",
-                "dimension176": "ANDROID_SH_TOUR_CTA.CONTROL",
-                "dimension61": "ARCS_MWEB_NAME_FIELD.ON",
-                "dimension179": "AR_CSAT_ONSITE_HDP.CONTROL",
-                "dimension164": "CW_FINANCE_WITH_INLINE_WEB.THREE_VARIANT_DIRECT_CPA",
-                "dimension60": "CW_HIGH_INTENT_PHONE_DESKTOP.CONTACT_FORM_NATIONAL",
-                "dimension42": "DESKTOP_COMMUTE_FILTER_MVP.CONTROL",
-                "dimension41": "DXP_DYNAMIC_ADS.ON",
-                "dimension45": "DXP_MAP_ABC.CONTROL",
-                "dimension40": "HDP_INSIGHTS_VERSION.CONTROL",
-                "dimension36": "HDP_MEDIASOLUTIONS_ADS_WEB_FSBA.CONTROL",
-                "dimension57": "IOS_BDP_SAVE_V2.CONTROL_OFF",
-                "dimension46": "IOS_HDP_INSIGHTS_VERSION.VERSION_2",
-                "dimension168": "IOS_ILLUMINATE_JOURNEY_V0.CONTROL_OFF",
-                "dimension38": "IOS_MONTHLY_COST_FILTER_MVP.CONTROL_OFF",
-                "dimension181": "IOS_PHOTO_CAROUSEL.ON",
-                "dimension43": "IOS_SHARED_WITH_YOU.ON",
-                "dimension62": "LEGO_MANAGING_CONTACTED_RENTALS.ON",
-                "dimension65": "MTT_RTB_X_PLACEMENT_TEST.SELL_ZHL_RENT",
-                "dimension180": "ONSITE_MESSAGE_VALVE.OMP_ON",
-                "dimension172": "RE_CONFIRMATION_CAROUSEL.CONTROL",
-                "dimension48": "RE_HDP_HOME_INSIGHTS_VERSION.VERSION_2",
-                "dimension182": "RE_SECOND_BOOST.SLOT_4",
-                "dimension165": "RE_WEB_SRP_ZILLOWAPPLICATIONSBADGE.CONTROL",
-                "dimension63": "RE_Web_PersonalizedSort.Web_PersonalizedSort_Rent_T1",
-                "dimension173": "SP_BUILDING_PAGE.CONTROL",
-                "dimension175": "SP_COMMUNITY_PAGE.VIA_SHOPPER_PLATFORM",
-                "dimension186": "SP_FOR_RENT_PAGE.CONTROL",
-                "dimension178": "SP_FOR_SALE_PAGE.VIA_SHOPPER_PLATFORM",
-                "dimension183": "SP_NATIVE_PBHDP_PAGE.CONTROL",
-                "dimension58": "SP_PAID_BUILDER_PAGE.CONTROL",
-                "dimension171": "SXP_NO_SRPTOGGLE.CONTROL",
-                "dimension47": "SXP_Search_Refinement_Filters.FILTERS_ON",
-                "dimension166": "TAS_DIRECT_CONNECT_ELIGIBLE_ANDROID.ON",
-                "dimension167": "TAS_DIRECT_CONNECT_ELIGIBLE_IOS.ON",
-                "dimension169": "VL_POI.CONTROL",
-                "dimension188": "ZEXP_DECISION_TOKEN_HOLD.tah1VK_1678644235"
-            });
-        </script>
-        <script>
-            var w = window.innerWidth || (document && document.documentElement && document.documentElement.clientWidth) || (document && document.body && document.body.clientWidth);
-
-            var h = window.innerHeight || (document && document.documentElement && document.documentElement.clientHeight) || (document && document.body && document.body.clientHeight);
-
-            ua('set', 'dimension20', w + "x" + h);
-            ua('set', 'dimension68', window.location.href);
-            ua('set', 'dimension69', document.referrer);
-            ua('set', 'dimension192', '1678644235300');
-            ga('set', 'dimension20', w + "x" + h);
-            ga('set', 'dimension68', window.location.href);
-            ga('set', 'dimension69', document.referrer);
-            ga('set', 'dimension192', '1678644235300');
-
-            document.addEventListener('DOMContentLoaded', function ProfileDOMContentLoadedEvent(e) {
-                // wait two seconds to make sure this performance metric has been recorded
-                setTimeout(function() {
-                    if (performance && performance.timing) {
-                        var domContentLoadedTime = ((performance.timing.domContentLoadedEventStart - performance.timing.navigationStart) / 1000).toFixed(2);
-                        ua('set', 'dimension72', domContentLoadedTime);
-                        ga('set', 'dimension72', domContentLoadedTime);
-                    }
-                }, 2000);
-                document.removeEventListener('DOMContentLoaded', ProfileDOMContentLoadedEvent);
-            });
-
-            window.addEventListener('load', function ProfileLoadEvent(e) {
-                // wait two seconds to make sure this performance metric has been recorded
-                setTimeout(function() {
-                    if (performance && performance.timing) {
-                        var loadEventTime = ((performance.timing.loadEventEnd - performance.timing.navigationStart) / 1000).toFixed(2);
-                        ua('set', 'dimension73', loadEventTime);
-                        ga('set', 'dimension73', loadEventTime);
-                    }
-                }, 2000);
-                window.removeEventListener('load', ProfileLoadEvent);
-            });
-        </script>
-        <script>
-            window.UI_INIT_AT = Date.now()
-        </script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-
-            window.dataLayer.unshift({
-                zillowSiteVersion: 4,
-                isMobile: false,
-                isMobileApp: false,
-                isPhone: false,
-                isTablet: false,
-                gaCustomDimensions: {
-                    dimension1: '5f615d8f7f11434699553cabb6a0b6a2/X1-ZUtikzp4h8vqq1_4srxs'
-                }
-            });
-
-            var gtmLoaded = false;
-            function loadGtmContainer() {
-                if (!gtmLoaded) {
-                    (function(w, d, s, l, i) {
-                        w[l] = w[l] || [];
-                        w[l].push({
-                            'gtm.start': new Date().getTime(),
-                            event: 'gtm.js'
-                        });
-                        var f = d.getElementsByTagName(s)[0]
-                          , j = d.createElement(s)
-                          , dl = l != 'dataLayer' ? '&l=' + l : '';
-                        j.async = true;
-                        j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
-                        f.parentNode.insertBefore(j, f);
-                    }
-                    )(window, document, 'script', 'dataLayer', 'GTM-P6HT97');
-                    gtmLoaded = true;
-                }
-            }
-            window.addEventListener('load', loadGtmContainer);
-            window.setTimeout(loadGtmContainer, 10000);
-        </script>
-        <link rel="dns-prefetch" href="//fonts.googleapis.com"/>
-        <meta charSet="utf-8"/>
-        <meta name="format-detection" content="telephone=no"/>
-        <meta http-equiv="x-dns-prefetch-control" content="on"/>
-        <meta name="referrer" content="always"/>
-        <meta name="viewport" content="width=device-width, height=device-height, user-scalable=yes, initial-scale=1.0, minimum-scale=1.0"/>
-        <meta name="msapplication-TileColor" content="#3366b8"/>
-        <meta name="msapplication-TileImage" content="https://www.zillowstatic.com/static/images/logos/zillow-logo-win8-tile.png"/>
-        <meta name="msapplication-config" content="none"/>
-        <meta name="apple-mobile-web-app-capable" content="yes"/>
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
-        <meta property="fb:app_id" content="172285552816089"/>
-        <meta name="google-translate-customization" content="691f1bfccade71b5-c065751219a379dd-g64cedb67f5ea020a-a"/>
-        <meta name="google-signin-clientid" content="238648973530.apps.googleusercontent.com"/>
-        <meta name="google-signin-scope" content="openid profile email"/>
-        <meta name="google-signin-cookiepolicy" content="single_host_origin"/>
-        <meta property="og:site_name" content="Zillow"/>
-        <script>
-            (function() {
-                if (typeof ga === undefined || !Array.isArray(ga.q)) {
-                    return
-                }
-                var gaSetCalls = [].concat(ga.q).filter(function(args) {
-                    return args && args[0] === 'set'
-                });
-                var dims = {};
-                gaSetCalls.forEach(function(cmdCall) {
-                    var arg1 = cmdCall[1]
-                      , arg2 = cmdCall[2];
-                    if (typeof arg1 === 'string') {
-                        dims[arg1] = arg2;
-                    } else if (typeof arg1 === 'object' && arg1 !== null) {
-                        Object.getOwnPropertyNames(arg1).forEach(function(k) {
-                            dims[k] = arg1[k]
-                        });
-                    }
-                });
-                if (typeof zanalytics !== 'undefined' && typeof zanalytics.setdim === 'function') {
-                    zanalytics.setdim(dims)
-                }
-            }
-            )();
-        </script>
-        <meta charSet="utf-8"/>
-        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"/>
-        <meta name="next-head-count" content="2"/>
-        <link rel="preload" href="https://www.zillowstatic.com/s3/homepage/_next/static/BR3CfObDVKlqNU1S2h3f2/pages/buy.js" as="script"/>
-        <link rel="preload" href="https://www.zillowstatic.com/s3/homepage/_next/static/BR3CfObDVKlqNU1S2h3f2/pages/_app.js" as="script"/>
-        <link rel="preload" href="https://www.zillowstatic.com/s3/homepage/_next/static/runtime/webpack-e0bf42a.js" as="script"/>
-        <link rel="preload" href="https://www.zillowstatic.com/s3/homepage/_next/static/chunks/commons.8abd837.js" as="script"/>
-        <link rel="preload" href="https://www.zillowstatic.com/s3/homepage/_next/static/runtime/main-ea96991.js" as="script"/>
-    </head>
     <body class="znav-transparent">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <div id="local-app-upsell" class="no-animation"></div>
@@ -4659,20 +4309,20 @@
                                         <span class="pfs__sc-103s6w0-2 fFgKqs"></span>
                                     </span>
                                 </button>
-                                <a href="https://bbonifacio-at-mudd.github.io/Yillow/index.html" aria-label="Zillow Real Estate" accessKey="1" data-za-action="Zillow logo click" data-za-category="!inherit" version="TRANSPARENT_MOBILE_ONLY" width="120" height="25" class="Anchor-c11n-8-62-4__sc-hn4bge-0 pfs__j60ma-0 kxYrXn znav-topnav-logo">
-                                    <img src="./images/YillowV1.png" type="image/svg+xml" alt="Zillow logo" focusable="false" height="25" width="120" class="pfs__j60ma-1 eCEnCc"/>
-                                    <img src="./images/YillowV1.png" type="image/svg+xml" alt="Zillow logo" focusable="false" height="25" width="120" class="pfs__j60ma-3 lfSOeK"/>
+                                <a href="https://bbonifacio-at-mudd.github.io/Yillow/index.html" aria-label="Yillow: A Parody of Zillow" accessKey="1" data-za-action="Yillow logo click" data-za-category="!inherit" version="TRANSPARENT_MOBILE_ONLY" width="120" height="25" class="Anchor-c11n-8-62-4__sc-hn4bge-0 pfs__j60ma-0 kxYrXn znav-topnav-logo">
+                                    <img src="./images/YillowV1.png" type="image/svg+xml" alt="Yillow logo" focusable="false" height="25" width="120" class="pfs__j60ma-1 eCEnCc"/>
+                                    <img src="./images/YillowV1.png" type="image/svg+xml" alt="Yillow logo" focusable="false" height="25" width="120" class="pfs__j60ma-3 lfSOeK"/>
                                 </a>
                                 <ul class="pfs__sc-1elvxkv-1 pfs__sc-1elvxkv-2 pfs__sc-11lsrwd-0 gyxIIv znav-links-authenticated" data-zg-section="user" data-display-my-zillow="true">
                                     <li class="pfs__sc-585qe5-0 LQquc">
-                                        <button type="button" aria-label="Open My Zillow sub-menu" class="pfs__sc-1psx3f8-0 fjJGgI">
-                                            <span class="VisuallyHidden-c11n-8-62-4__sc-t8tewe-0 jUSvZE">Open My Zillow sub-menu</span>
+                                        <button type="button" aria-label="Open My Yillow sub-menu" class="pfs__sc-1psx3f8-0 fjJGgI">
+                                            <span class="VisuallyHidden-c11n-8-62-4__sc-t8tewe-0 jUSvZE">Open My Yillow sub-menu</span>
                                             <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false" role="img" class="Icon-c11n-8-62-4__sc-13llmml-0 kNHTkr">
                                                 <title>Chevron Down</title>
                                                 <path stroke="none" d="M29.41 8.59a2 2 0 00-2.83 0L16 19.17 5.41 8.59a2 2 0 00-2.83 2.83l12 12a2 2 0 002.82 0l12-12a2 2 0 00.01-2.83z"></path>
                                             </svg>
                                         </button>
-                                        <div data-za-label="My Zillow">
+                                        <div data-za-label="My Yillow">
                                             <button aria-expanded="false" tabindex="0" class="pfs__sc-17w0ycv-3 egTTnC pfs__sc-17w0ycv-0 byTvoJ" aria-haspopup="dialog">
                                                 <div class="StyledAvatar-c11n-8-62-4__sc-kppzr1-0 FnApP">
                                                     <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false" role="img" class="Icon-c11n-8-62-4__sc-13llmml-0 fOwLTf">
@@ -4689,7 +4339,7 @@
                             </div>
                             <div class="pfs__sc-1ve4drk-0 iNhaTW znav-links">
                                 <div class="pfs__sc-1vxjlvm-0 gcJTZh">
-                                    <a href="https://bbonifacio-at-mudd.github.io/Yillow/index.html" title="Zillow Real Estate" data-za-action="Zillow logo click" data-za-category="!inherit" data-display-my-zillow="true" class="Anchor-c11n-8-62-4__sc-hn4bge-0 hjVzie">Homepage</a>
+                                    <a href="https://bbonifacio-at-mudd.github.io/Yillow/index.html" title="Yillow Real Estate" data-za-action="Yillow logo click" data-za-category="!inherit" data-display-my-zillow="true" class="Anchor-c11n-8-62-4__sc-hn4bge-0 hjVzie">Homepage</a>
                                 </div>
                                 <ul data-zg-section="main" class="pfs__sc-1elvxkv-1 pfs__sc-1elvxkv-2 pfs__sc-1wickoz-0 fzMoEi">
                                     <li class="pfs__sc-585qe5-0 LQquc">
@@ -4786,11 +4436,6 @@
                                                                         <li>
                                                                             <a href="https://bbonifacio-at-mudd.github.io/Yillow/price/trends.html" rel="" data-za-action="Rental buildings" data-za-label="!inherit" data-za-category="!inherit" class="Anchor-c11n-8-62-4__sc-hn4bge-0 pfs__ulmj52-0 gEjusp">
                                                                                 <span>Price Trends </span>
-                                                                            </a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="https://bbonifacio-at-mudd.github.io/Yillow/price/feature.html" rel="" data-za-action="Apartments for rent" data-za-label="!inherit" data-za-category="!inherit" class="Anchor-c11n-8-62-4__sc-hn4bge-0 pfs__ulmj52-0 gEjusp">
-                                                                                <span>Feature Importance </span>
                                                                             </a>
                                                                         </li>
                                                                         <li>
@@ -4954,13 +4599,13 @@
                                                     </ul> 
                                                     <ul class="pfs__xukzw9-2 cSiFji">
                                                         <li>
-                                                            <h6 class="pfs__sc-1449t2l-0 gGNmKv">Yestimate</h6>
+                                                            <h6 class="pfs__sc-1449t2l-0 gGNmKv">Yillow Maps</h6>
                                                             <ul class="pfs__c1z80u-0 jpbszD">
                                                                 <li>
                                                                     <ul class="pfs__ryrjop-0 gutigg">
                                                                         <li>
                                                                             <a href="https://bbonifacio-at-mudd.github.io/Yillow/yestimate.html" rel="" data-za-action="Rental buildings" data-za-label="!inherit" data-za-category="!inherit" class="Anchor-c11n-8-62-4__sc-hn4bge-0 pfs__ulmj52-0 gEjusp">
-                                                                                <span>Yestimate </span>
+                                                                                <span>Yillow Maps </span>
                                                                             </a>
                                                                         </li>
                                                                     </ul>
@@ -5116,11 +4761,6 @@
                                                                             </a>
                                                                         </li>
                                                                         <li>
-                                                                            <a href="https://bbonifacio-at-mudd.github.io/Yillow/price/feature.html" rel="" data-za-action="Apartments for rent" data-za-label="!inherit" data-za-category="!inherit" class="Anchor-c11n-8-62-4__sc-hn4bge-0 pfs__ulmj52-0 gEjusp">
-                                                                                <span>Feature Importance </span>
-                                                                            </a>
-                                                                        </li>
-                                                                        <li>
                                                                             <a href="https://bbonifacio-at-mudd.github.io/Yillow/price/correlation.html"  rel="" data-za-action="Houses for rent" data-za-label="!inherit" data-za-category="!inherit" class="Anchor-c11n-8-62-4__sc-hn4bge-0 pfs__ulmj52-0 gEjusp">
                                                                                 <span>Feature Correlation</span>
                                                                             </a>
@@ -5281,13 +4921,13 @@
                                                     </ul> 
                                                     <ul class="pfs__xukzw9-2 cSiFji">
                                                         <li>
-                                                            <h6 class="pfs__sc-1449t2l-0 gGNmKv">Yestimate</h6>
+                                                            <h6 class="pfs__sc-1449t2l-0 gGNmKv">Yillow Maps</h6>
                                                             <ul class="pfs__c1z80u-0 jpbszD">
                                                                 <li>
                                                                     <ul class="pfs__ryrjop-0 gutigg">
                                                                         <li>
                                                                             <a href="https://bbonifacio-at-mudd.github.io/Yillow/yestimate.html" rel="" data-za-action="Rental buildings" data-za-label="!inherit" data-za-category="!inherit" class="Anchor-c11n-8-62-4__sc-hn4bge-0 pfs__ulmj52-0 gEjusp">
-                                                                                <span>Yestimate </span>
+                                                                                <span>Yillow Maps </span>
                                                                             </a>
                                                                         </li>
                                                                     </ul>
@@ -5443,11 +5083,6 @@
                                                                             </a>
                                                                         </li>
                                                                         <li>
-                                                                            <a href="https://bbonifacio-at-mudd.github.io/Yillow/price/feature.html" rel="" data-za-action="Apartments for rent" data-za-label="!inherit" data-za-category="!inherit" class="Anchor-c11n-8-62-4__sc-hn4bge-0 pfs__ulmj52-0 gEjusp">
-                                                                                <span>Feature Importance </span>
-                                                                            </a>
-                                                                        </li>
-                                                                        <li>
                                                                             <a href="https://bbonifacio-at-mudd.github.io/Yillow/price/correlation.html"  rel="" data-za-action="Houses for rent" data-za-label="!inherit" data-za-category="!inherit" class="Anchor-c11n-8-62-4__sc-hn4bge-0 pfs__ulmj52-0 gEjusp">
                                                                                 <span>Feature Correlation</span>
                                                                             </a>
@@ -5608,13 +5243,13 @@
                                                     </ul> 
                                                     <ul class="pfs__xukzw9-2 cSiFji">
                                                         <li>
-                                                            <h6 class="pfs__sc-1449t2l-0 gGNmKv">Yestimate</h6>
+                                                            <h6 class="pfs__sc-1449t2l-0 gGNmKv">Yillow Maps</h6>
                                                             <ul class="pfs__c1z80u-0 jpbszD">
                                                                 <li>
                                                                     <ul class="pfs__ryrjop-0 gutigg">
                                                                         <li>
                                                                             <a href="https://bbonifacio-at-mudd.github.io/Yillow/yestimate.html" rel="" data-za-action="Rental buildings" data-za-label="!inherit" data-za-category="!inherit" class="Anchor-c11n-8-62-4__sc-hn4bge-0 pfs__ulmj52-0 gEjusp">
-                                                                                <span>Yestimate </span>
+                                                                                <span>Yillow Maps </span>
                                                                             </a>
                                                                         </li>
                                                                     </ul>
@@ -5770,11 +5405,6 @@
                                                                             </a>
                                                                         </li>
                                                                         <li>
-                                                                            <a href="https://bbonifacio-at-mudd.github.io/Yillow/price/feature.html" rel="" data-za-action="Apartments for rent" data-za-label="!inherit" data-za-category="!inherit" class="Anchor-c11n-8-62-4__sc-hn4bge-0 pfs__ulmj52-0 gEjusp">
-                                                                                <span>Feature Importance </span>
-                                                                            </a>
-                                                                        </li>
-                                                                        <li>
                                                                             <a href="https://bbonifacio-at-mudd.github.io/Yillow/price/correlation.html"  rel="" data-za-action="Houses for rent" data-za-label="!inherit" data-za-category="!inherit" class="Anchor-c11n-8-62-4__sc-hn4bge-0 pfs__ulmj52-0 gEjusp">
                                                                                 <span>Feature Correlation</span>
                                                                             </a>
@@ -5935,13 +5565,13 @@
                                                     </ul> 
                                                     <ul class="pfs__xukzw9-2 cSiFji">
                                                         <li>
-                                                            <h6 class="pfs__sc-1449t2l-0 gGNmKv">Yestimate</h6>
+                                                            <h6 class="pfs__sc-1449t2l-0 gGNmKv">Yillow Maps</h6>
                                                             <ul class="pfs__c1z80u-0 jpbszD">
                                                                 <li>
                                                                     <ul class="pfs__ryrjop-0 gutigg">
                                                                         <li>
                                                                             <a href="https://bbonifacio-at-mudd.github.io/Yillow/yestimate.html" rel="" data-za-action="Rental buildings" data-za-label="!inherit" data-za-category="!inherit" class="Anchor-c11n-8-62-4__sc-hn4bge-0 pfs__ulmj52-0 gEjusp">
-                                                                                <span>Yestimate </span>
+                                                                                <span>Yillow Maps </span>
                                                                             </a>
                                                                         </li>
                                                                     </ul>
@@ -6005,7 +5635,7 @@
                                 <ul data-zg-section="marketing" data-display-my-zillow="true" data-display-agent="false" class="pfs__sc-1elvxkv-1 pfs__sc-1elvxkv-2 pfs__thqlz5-0 jrqgtg">
                                     <li class="pfs__sc-585qe5-0 LQquc">
                                         <a href="https://bbonifacio-at-mudd.github.io/Yillow/yestimate.html" class="Anchor-c11n-8-62-4__sc-hn4bge-0 pfs__sc-1dpbk03-0 cwauRD"  data-za-action="Agent finder" data-za-category="!inherit" data-active="false" data-zg-role="section-title">
-                                            <span>Yestimate 
+                                            <span>Yillow Maps 
                                             <!-- -->
                                             </span>
                                         </a>
@@ -6062,29 +5692,6 @@
                                             <!-- -->
                                             </span>
                                         </a>
-                                    </li>
-                                </ul>
-                                <ul class="pfs__sc-1elvxkv-1 pfs__sc-1elvxkv-2 pfs__sc-11lsrwd-0 gyxIIv znav-links-authenticated" data-zg-section="user" data-display-my-zillow="true">
-                                    <li class="pfs__sc-585qe5-0 LQquc">
-                                        <button type="button" aria-label="Open My Zillow sub-menu" class="pfs__sc-1psx3f8-0 fjJGgI">
-                                            <span class="VisuallyHidden-c11n-8-62-4__sc-t8tewe-0 jUSvZE">Open My Zillow sub-menu</span>
-                                            <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false" role="img" class="Icon-c11n-8-62-4__sc-13llmml-0 kNHTkr">
-                                                <title>Chevron Down</title>
-                                                <path stroke="none" d="M29.41 8.59a2 2 0 00-2.83 0L16 19.17 5.41 8.59a2 2 0 00-2.83 2.83l12 12a2 2 0 002.82 0l12-12a2 2 0 00.01-2.83z"></path>
-                                            </svg>
-                                        </button>
-                                        <div data-za-label="My Zillow">
-                                            <button aria-expanded="false" tabindex="0" class="pfs__sc-17w0ycv-3 egTTnC pfs__sc-17w0ycv-0 byTvoJ" aria-haspopup="dialog">
-                                                <div class="StyledAvatar-c11n-8-62-4__sc-kppzr1-0 FnApP">
-                                                    <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false" role="img" class="Icon-c11n-8-62-4__sc-13llmml-0 fOwLTf">
-                                                        <title>User</title>
-                                                        <g stroke="none">
-                                                            <path d="M22.03 17.69l-2.07-.4A9.79 9.79 0 0023 10.5V9.06a7 7 0 10-14 0v1.44a9.68 9.68 0 003 6.8c-.69.1-2.03.39-2.03.39C5.26 18.8 2 21.2 2 24v4a2 2 0 002 2h24a2 2 0 002-2v-4c0-2.79-3.26-5.19-7.97-6.31z"></path>
-                                                        </g>
-                                                    </svg>
-                                                </div>
-                                            </button>
-                                        </div>
                                     </li>
                                 </ul>
                             </div>
@@ -7046,8 +6653,5 @@
         <img src="./images/Footer.png" alt="Footer Image" style="width:75%; height:auto; display:block; margin: auto;">
     </body>
     
-
-
-
 </html>
 <!-- line 5425 is when second section starts-->
