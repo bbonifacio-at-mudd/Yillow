@@ -6511,12 +6511,13 @@
 
             <div class="row">
                 <div class="col">
-                    <h2>Price Transformation</h2>
+                    <h2>Feature Normalization</h2>
                     <p>Machine learning algorithms work best when all quantitative features and (in the case of regression) the prediction goal are normally distributed
-                        and not large. Although most of my features were fairly small and approximately normally distributed, the most important variable was not: price. 
-                        The price was not normally distributed and also had a very large range, so I had to transform it. However, thankfully I could kill two birds with one 
-                        stone by simply taking the log of the price, which both made the price more normal and also made the range of the price much smaller. Although I would need 
-                        to take the exponent of the prediction to get the actual price, this was a small price to pay for the benefits of this transformation. 
+                        and small. In other words, the closer it is to a normal distribution with mean 0 and standard deviation 1, the better. Although most of my features are small 
+                        and approximately normally distributed, there were two notable exceptions to this: living area and price. </p>
+                        <p> Thankfully, this is an easy fix if you are aware of it. Both features had long rightward tails, so I used a log transformation to make them smaller 
+                            and more normal.  Although I would need to be extra careful in my code to ensure that I remembered where I was using the logarithm of the price/living area and 
+                            where I wasn't, this was a small price to pay for the benefits this transformation does for the machine learning. 
                         </p>
                 </div>
             </div>
